@@ -1,0 +1,11 @@
+#Start recording tcl command: 11/18/2021 23:25:19
+#Project Location: D:/Users/nicob/Desktop/TP2_E3-G2/AlarmModule; Project name: AlarmModule
+prj_create -name "AlarmModule" -impl "Alarm" -dev iCE40UP5K-SG48I -performance "High-Performance_1.2V" -synthesis "lse"
+prj_add_source "D:/Users/nicob/Desktop/TP2_E3-G2/AlarmModule/source/Alarm/Alarm.sdc" "D:/Users/nicob/Desktop/TP2_E3-G2/AlarmModule/source/Alarm/Alarm.pdc"
+prj_save 
+prj_add_source "D:/Users/nicob/Desktop/TP2_E3-G2/AlarmModule/source/Alarm/codeCheck.v" "D:/Users/nicob/Desktop/TP2_E3-G2/AlarmModule/source/Alarm/easySerialOut.v" "D:/Users/nicob/Desktop/TP2_E3-G2/AlarmModule/source/Alarm/MainModule.v" "D:/Users/nicob/Desktop/TP2_E3-G2/AlarmModule/source/Alarm/serialIn.v" "D:/Users/nicob/Desktop/TP2_E3-G2/AlarmModule/source/Alarm/serialOut.v" "D:/Users/nicob/Desktop/TP2_E3-G2/AlarmModule/source/Alarm/timer.v"
+prj_remove_source "D:/Users/nicob/Desktop/TP2_E3-G2/AlarmModule/source/Alarm/serialIn.v"
+prj_run Synthesis -impl Alarm
+prj_run Export -impl Alarm
+launch_programmer_prj "C:/lscc/radiant/3.0"
+#Stop recording: 11/18/2021 23:32:49

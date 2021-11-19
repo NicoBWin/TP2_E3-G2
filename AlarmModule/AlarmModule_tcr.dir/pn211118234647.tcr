@@ -1,0 +1,7 @@
+#Start recording tcl command: 11/18/2021 23:40:19
+#Project Location: D:/Users/nicob/Desktop/TP2_E3-G2/AlarmModule; Project name: AlarmModule
+prj_open "D:/Users/nicob/Desktop/TP2_E3-G2/AlarmModule/AlarmModule.rdf"
+prj_run Export -impl Alarm
+launch_programmer_prj "C:/lscc/radiant/3.0"
+prj_run Export -impl Alarm
+#Stop recording: 11/18/2021 23:46:47

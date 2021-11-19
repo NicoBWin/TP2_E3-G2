@@ -1,0 +1,695 @@
+
+"C:/lscc/radiant/3.0/tcltk/windows/bin/tclsh" "AlarmModule_Alarm_synthesize.tcl"
+
+synthesis -f AlarmModule_Alarm_lattice.synproj
+synthesis:  version Radiant Software (64-bit) 3.0.0.24.1
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2021 Lattice Semiconductor Corporation,  All rights reserved.
+Thu Nov 18 23:40:39 2021
+
+
+Command Line:  C:\lscc\radiant\3.0\ispfpga\bin\nt64\synthesis.exe -f AlarmModule_Alarm_lattice.synproj -gui -msgset D:/Users/nicob/Desktop/TP2_E3-G2/AlarmModule/promote.xml 
+
+INFO - synthesis: Lattice Synthesis Engine Launched.
+Synthesis options:
+The -a option is iCE40UP.
+The -t option is SG48.
+The -sp option is High-Performance_1.2V.
+The -p option is iCE40UP5K.
+                                                          
+
+
+##########################################################
+
+
+### Lattice Family     : iCE40UP
+
+
+### Device             : iCE40UP5K
+
+
+### Package            : SG48
+
+
+### Performance Grade  : High-Performance_1.2V
+
+
+                                                         
+
+
+INFO - User-Selected Strategy SettingsOptimization goal = Area
+Top-level module name = MainModule.
+Target frequency = 200.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 3
+RWCheckOnRam = 0
+
+BRAM utilization = 100.000000 %
+DSP usage = true
+DSP utilization = 100.000000 %
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+
+Mux style = auto (Default)
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+Output HDL file name = AlarmModule_Alarm.vm.
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-sdc option: SDC file input is D:/Users/nicob/Desktop/TP2_E3-G2/AlarmModule/source/Alarm/Alarm.sdc.
+-path C:/lscc/radiant/3.0/ispfpga/ice40tp/data (searchpath added)
+-path D:/Users/nicob/Desktop/TP2_E3-G2/AlarmModule (searchpath added)
+-path D:/Users/nicob/Desktop/TP2_E3-G2/AlarmModule/Alarm (searchpath added)
+Mixed language design
+Verilog design file = C:/lscc/radiant/3.0/ip/pmi/pmi_iCE40UP.v
+Verilog design file = D:/Users/nicob/Desktop/TP2_E3-G2/AlarmModule/source/Alarm/MainModule.v
+Verilog design file = D:/Users/nicob/Desktop/TP2_E3-G2/AlarmModule/source/Alarm/easySerialOut.v
+Verilog design file = D:/Users/nicob/Desktop/TP2_E3-G2/AlarmModule/source/Alarm/serialOut.v
+Verilog design file = D:/Users/nicob/Desktop/TP2_E3-G2/AlarmModule/source/Alarm/codeCheck.v
+Verilog design file = D:/Users/nicob/Desktop/TP2_E3-G2/AlarmModule/source/Alarm/timer.v
+VHDL library = pmi
+VHDL design file = C:/lscc/radiant/3.0/ip/pmi/pmi_iCE40UP.vhd
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Compile design.
+Compile Design Begin
+Analyzing Verilog file c:/lscc/radiant/3.0/ip/pmi/pmi_ice40up.v. VERI-1482
+INFO - "c:/lscc/radiant/3.0/ip/pmi/pmi_ice40up.v(1):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/3.0/ip/pmi/pmi_addsub.v(40):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/3.0/ip/pmi/pmi_ice40up.v(2):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/3.0/ip/pmi/pmi_add.v(50):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/3.0/ip/pmi/pmi_ice40up.v(3):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/3.0/ip/pmi/pmi_complex_mult.v(52):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/3.0/ip/pmi/pmi_ice40up.v(4):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/3.0/ip/pmi/pmi_counter.v(39):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/3.0/ip/pmi/pmi_ice40up.v(5):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/3.0/ip/pmi/pmi_fifo.v(44):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/3.0/ip/pmi/pmi_ice40up.v(6):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/3.0/ip/pmi/pmi_fifo_dc.v(47):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/3.0/ip/pmi/pmi_ice40up.v(7):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/3.0/ip/pmi/pmi_mac.v(52):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/3.0/ip/pmi/pmi_ice40up.v(8):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/3.0/ip/pmi/pmi_multaddsubsum.v(53):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/3.0/ip/pmi/pmi_ice40up.v(9):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/3.0/ip/pmi/pmi_multaddsub.v(52):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/3.0/ip/pmi/pmi_ice40up.v(10):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/3.0/ip/pmi/pmi_mult.v(51):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/3.0/ip/pmi/pmi_ice40up.v(11):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/3.0/ip/pmi/pmi_ram_dp.v(48):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/3.0/ip/pmi/pmi_ice40up.v(12):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/3.0/ip/pmi/pmi_ram_dq.v(45):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/3.0/ip/pmi/pmi_ice40up.v(13):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/3.0/ip/pmi/pmi_rom.v(45):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/3.0/ip/pmi/pmi_ice40up.v(14):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/3.0/ip/pmi/pmi_sub.v(50):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/3.0/ip/pmi/pmi_ice40up.v(15):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/3.0/ip/pmi/pmi_ram_dp_be.v(49):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/3.0/ip/pmi/pmi_ice40up.v(16):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/3.0/ip/pmi/pmi_ram_dq_be.v(45):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/3.0/ip/pmi/pmi_ice40up.v(17):analyzing included file . VERI-1328Analyzing Verilog file d:/users/nicob/desktop/tp2_e3-g2/alarmmodule/source/alarm/mainmodule.v. VERI-1482
+Analyzing Verilog file d:/users/nicob/desktop/tp2_e3-g2/alarmmodule/source/alarm/easyserialout.v. VERI-1482
+Analyzing Verilog file d:/users/nicob/desktop/tp2_e3-g2/alarmmodule/source/alarm/serialout.v. VERI-1482
+Analyzing Verilog file d:/users/nicob/desktop/tp2_e3-g2/alarmmodule/source/alarm/codecheck.v. VERI-1482
+Analyzing Verilog file d:/users/nicob/desktop/tp2_e3-g2/alarmmodule/source/alarm/timer.v. VERI-1482
+Analyzing VHDL file c:/lscc/radiant/3.0/ip/pmi/pmi_ice40up.vhd. VHDL-1481
+Analyzing VHDL file c:/lscc/radiant/3.0/ip/pmi/pmi_ice40up.vhd
+
+INFO - "c:/lscc/radiant/3.0/ip/pmi/pmi_ice40up.vhd(4):analyzing package . VHDL-1014unit MainModule is not yet analyzed. VHDL-1485
+INFO - The default VHDL library search path is now "D:/Users/nicob/Desktop/TP2_E3-G2/AlarmModule/Alarm". VHDL-1504Top module language type = Verilog.
+Top module name (Verilog, mixed language): MainModule
+INFO - "d:/users/nicob/desktop/tp2_e3-g2/alarmmodule/source/alarm/mainmodule.v(1):compiling module . VERI-1018INFO - "C:/lscc/radiant/3.0/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(764):compiling module . VERI-1018INFO - "d:/users/nicob/desktop/tp2_e3-g2/alarmmodule/source/alarm/timer.v(4):compiling module . VERI-1018INFO - "d:/users/nicob/desktop/tp2_e3-g2/alarmmodule/source/alarm/easyserialout.v(5):compiling module . VERI-1018INFO - "d:/users/nicob/desktop/tp2_e3-g2/alarmmodule/source/alarm/serialout.v(1):compiling module . VERI-1018INFO - "d:/users/nicob/desktop/tp2_e3-g2/alarmmodule/source/alarm/codecheck.v(1):compiling module . VERI-1018WARNING - "d:/users/nicob/desktop/tp2_e3-g2/alarmmodule/source/alarm/codecheck.v(40): should be on the sensitivity list. VERI-1221WARNING - "d:/users/nicob/desktop/tp2_e3-g2/alarmmodule/source/alarm/codecheck.v(45): should be on the sensitivity list. VERI-1221WARNING - "d:/users/nicob/desktop/tp2_e3-g2/alarmmodule/source/alarm/codecheck.v(45): should be on the sensitivity list. VERI-1221WARNING - "d:/users/nicob/desktop/tp2_e3-g2/alarmmodule/source/alarm/codecheck.v(45): should be on the sensitivity list. VERI-1221WARNING - "d:/users/nicob/desktop/tp2_e3-g2/alarmmodule/source/alarm/codecheck.v(45): should be on the sensitivity list. VERI-1221WARNING - "d:/users/nicob/desktop/tp2_e3-g2/alarmmodule/source/alarm/codecheck.v(46): should be on the sensitivity list. VERI-1221WARNING - "d:/users/nicob/desktop/tp2_e3-g2/alarmmodule/source/alarm/codecheck.v(46): should be on the sensitivity list. VERI-1221WARNING - "d:/users/nicob/desktop/tp2_e3-g2/alarmmodule/source/alarm/codecheck.v(46): should be on the sensitivity list. VERI-1221WARNING - "d:/users/nicob/desktop/tp2_e3-g2/alarmmodule/source/alarm/codecheck.v(46): should be on the sensitivity list. VERI-1221WARNING - "d:/users/nicob/desktop/tp2_e3-g2/alarmmodule/source/alarm/codecheck.v(57): should be on the sensitivity list. VERI-1221WARNING - "d:/users/nicob/desktop/tp2_e3-g2/alarmmodule/source/alarm/mainmodule.v(82): should be on the sensitivity list. VERI-1221                                                         
+
+
+### Number of Logic Cells: 5280
+
+
+### Number of RAM Blocks: 30
+
+
+### Number of DSP Blocks: 8
+
+
+### Number of PLLs: 1
+
+
+### Number of IO Pins: 56
+
+
+##########################################################
+
+
+                                                         
+
+
+WARNING - Initial value found on net KEY_STATUS[1] will be ignored due to unrecognized driver typeWARNING - Initial value found on net KEY_STATUS[0] will be ignored due to unrecognized driver type
+
+
+WARNING - Mapping latch PREV_KEY_1__I_0_i1 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statementsWARNING - Mapping latch Snext_1__I_0_i1 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statementsWARNING - Mapping latch TIMER_EN_I_0 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statementsWARNING - Mapping latch \keyboard/actualKey_0__1__I_0_2_i1 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statementsWARNING - Mapping latch \keyboard/KB_IN_1__I_0_i1 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statementsWARNING - Mapping latch \keyboard/KB_IN_1__I_0_3_i1 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statementsWARNING - Mapping latch \keyboard/KB_IN_1__I_0_2_i1 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statementsWARNING - Mapping latch \keyboard/nextState_1__I_0_i1 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statementsWARNING - Mapping latch \keyboard/nextState_1__I_0_i2 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statementsWARNING - Mapping latch PREV_KEY_1__I_0_i2 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statementsWARNING - Mapping latch Snext_1__I_0_i2 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statementsWARNING - Mapping latch \keyboard/actualKey_0__1__I_0_2_i2 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statementsWARNING - Mapping latch \keyboard/KB_IN_1__I_0_i2 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statementsWARNING - Mapping latch \keyboard/KB_IN_1__I_0_3_i2 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statementsWARNING - Mapping latch \keyboard/KB_IN_1__I_0_2_i2 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statementsINFO - Special Primitives IFD1P3AZ and OFD1P3AZ for ThunderPlus are synthesized using IOL_B.
+################### Begin Area Report (MainModule)######################
+Number of register bits => 100 of 5280 (1 % )
+CCU2 => 44
+FD1P3XZ => 100
+IB => 6
+IOL_B => 1
+LSOSC_CORE => 1
+LUT4 => 168
+OB => 4
+################### End Area Report ##################
+Number of odd-length carry chains : 0
+Number of even-length carry chains : 3
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 2
+  Net : SERCLK_OUT_c, loads : 1
+  Net : KB_RECV_c, loads : 0
+Clock Enable Nets
+Number of Clock Enables: 0
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : STATE_OUT/waiting, loads : 32
+  Net : STATE_OUT/waiting_N_151, loads : 31
+  Net : STATE_OUT/serial/n174, loads : 30
+  Net : mainTimer/TIME_OUT, loads : 24
+  Net : mainTimer/clkCont_17__N_49, loads : 19
+  Net : Sreg[0], loads : 13
+  Net : Sreg[1], loads : 12
+  Net : KEY_STATUS[1], loads : 11
+  Net : keyboard/state[1], loads : 10
+  Net : keyboard/state[0], loads : 10
+################### End Clock Report ##################
+
+Peak Memory Usage: 78 MB
+
+--------------------------------------------------------------
+Total CPU Time: 2 secs 
+Total REAL Time: 3 secs 
+--------------------------------------------------------------
+
+
+postsyn -a iCE40UP -p iCE40UP5K -t SG48 -sp High-Performance_1.2V -oc Industrial -top -w -o AlarmModule_Alarm_syn.udb AlarmModule_Alarm.vm -ldc D:/Users/nicob/Desktop/TP2_E3-G2/AlarmModule/Alarm/AlarmModule_Alarm.ldc
+POSTSYN: Post Synthesis Process Radiant Software (64-bit) 3.0.0.24.1
+Command Line: postsyn -a iCE40UP -p iCE40UP5K -t SG48 -sp High-Performance_1.2V -oc Industrial -top -w -o AlarmModule_Alarm_syn.udb -ldc D:/Users/nicob/Desktop/TP2_E3-G2/AlarmModule/Alarm/AlarmModule_Alarm.ldc -gui -msgset D:/Users/nicob/Desktop/TP2_E3-G2/AlarmModule/promote.xml AlarmModule_Alarm.vm 
+   Architecture:     iCE40UP
+   Device:           iCE40UP5K
+   Package:          SG48
+   Performance:      High-Performance_1.2V
+Reading input file 'AlarmModule_Alarm.vm' ...
+CPU Time to convert: 0.1875
+REAL Time to convert: 0
+convert PEAK Memory Usage: 27 MB
+convert CURRENT Memory Usage: 27 MB
+Reading constraint file 'D:/Users/nicob/Desktop/TP2_E3-G2/AlarmModule/Alarm/AlarmModule_Alarm.ldc' ...
+Removing unused logic ...
+Starting design annotation....
+Writing output file 'AlarmModule_Alarm_syn.udb'.
+POSTSYN finished successfully.
+Total CPU Time: 0 secs 
+Total REAL Time: 0 secs 
+Peak Memory Usage: 33 MB
+
+
+timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1  -html -rpt "AlarmModule_Alarm.tws" "AlarmModule_Alarm_syn.udb" 
+timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -html -rpt AlarmModule_Alarm.tws AlarmModule_Alarm_syn.udb -gui
+Starting design reading...
+Initializing timer
+Starting design annotation....
+392 pins removed from timing;  check file logicalTimingIgnoredPins.log
+High-Performance_1.2V
+
+Starting full timing analysis...
+Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/3.0/ispfpga.
+Package Status:                     Preliminary    Version 1.5.
+Connections ignored  106  counted  892  covered  857
+
+STA Runtime and Peak Memory Usage :
+Total CPU Time: 0 secs 
+Total REAL Time: 0 secs 
+Peak Memory Usage: 50 MB
+
+ 0.735908s wall, 0.531250s user + 0.187500s system = 0.718750s CPU (97.7%)
+
+
+map "AlarmModule_Alarm_syn.udb" "D:/Users/nicob/Desktop/TP2_E3-G2/AlarmModule/source/Alarm/Alarm.pdc" -o "AlarmModule_Alarm_map.udb" -mp "AlarmModule_Alarm.mrp" -hierrpt     
+map:  version Radiant Software (64-bit) 3.0.0.24.1
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2021 Lattice Semiconductor Corporation,  All rights reserved.
+
+Command line:   map AlarmModule_Alarm_syn.udb D:/Users/nicob/Desktop/TP2_E3-G2/AlarmModule/source/Alarm/Alarm.pdc -o AlarmModule_Alarm_map.udb -mp AlarmModule_Alarm.mrp -hierrpt -gui 
+
+Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/3.0/ispfpga.
+Package Status:                     Preliminary    Version 1.5.
+
+
+
+   Remove unused logic
+
+   Do not produce over sized UDBs.
+
+Running general design DRC...
+
+Removing unused logic...
+
+Optimizing...
+
+
+
+
+Design Summary:
+   Number of slice registers: 100 out of  5280 (2%)
+   Number of I/O registers:      1 out of   117 (1%)
+   Number of LUT4s:           265 out of  5280 (5%)
+      Number of logic LUT4s:             169
+      Number of inserted feedthru LUT4s:   3
+      Number of replicated LUT4s:          5
+      Number of ripple logic:             44 (88 LUT4s)
+   Number of IO sites used:   10 out of 39 (26%)
+      Number of IO sites used for general PIO: 10
+      Number of IO sites used for I3C: 0 out of 2 (0%)
+      (note: If I3C is not used, its site can be used as general PIO)
+      Number of IO sites used for PIO+I3C: 10 out of 36 (28%)
+      Number of IO sites used for OD+RGB IO buffers: 0 out of 3 (0%)
+      (note: If RGB LED drivers are not used, sites can be used as OD outputs,
+       see TN1288 iCE40 LED Driver Usage Guide)
+      Number of IO sites used for PIO+I3C+OD+RGB: 10 out of 39 (26%)
+   Number of DSPs:             0 out of 8 (0%)
+   Number of I2Cs:             0 out of 2 (0%)
+   Number of High Speed OSCs:  0 out of 1 (0%)
+   Number of Low Speed OSCs:   1 out of 1 (100%)
+   Number of RGB PWM:          0 out of 1 (0%)
+   Number of RGB Drivers:      0 out of 1 (0%)
+   Number of SCL FILTERs:      0 out of 2 (0%)
+   Number of SRAMs:            0 out of 4 (0%)
+   Number of WARMBOOTs:        0 out of 1 (0%)
+   Number of SPIs:             0 out of 2 (0%)
+   Number of EBRs:             0 out of 30 (0%)
+   Number of PLLs:             0 out of 1 (0%)
+   Number of Clocks:  2
+      Net SERCLK_OUT_c: 99 loads, 99 rising, 0 falling (Driver: Pin OSCInst1/CLKLF)
+      Net KB_RECV_c: 2 loads, 2 rising, 0 falling (Driver: Port KB_RECV)
+   Number of Clock Enables:  3
+      Net VCC_net: 1 loads, 0 SLICEs
+      Net STATE_OUT.waiting_N_147: 2 loads, 2 SLICEs
+      Net STATE_OUT.n173: 3 loads, 3 SLICEs
+   Number of LSRs:  7
+      Pin RESET_IN: 2 loads, 2 SLICEs (Net: RESET_IN_c)
+      Net n174: 2 loads, 2 SLICEs
+      Net mainTimer.clkCont_17__N_49: 19 loads, 19 SLICEs
+      Net STATE_OUT.waiting_N_147: 4 loads, 4 SLICEs
+      Net STATE_OUT.n193: 2 loads, 2 SLICEs
+      Net STATE_OUT.n173: 1 loads, 1 SLICEs
+      Net STATE_OUT.serial.n503: 1 loads, 1 SLICEs
+   Top 10 highest fanout non-clock nets:
+      Net waiting: 34 loads
+      Net waiting_N_151: 32 loads
+      Net n174: 31 loads
+      Net TIME_OUT: 25 loads
+      Net mainTimer.clkCont_17__N_49: 19 loads
+      Net Sreg[0]: 13 loads
+      Net Sreg[1]: 12 loads
+      Net state[0]: 12 loads
+      Net KEY_STATUS[1]: 11 loads
+      Net state[1]: 11 loads
+Running physical design DRC...
+
+ 
+
+   Number of warnings:  0
+   Number of errors:    0
+
+
+
+Total CPU Time: 0 secs  
+Total REAL Time: 0 secs  
+Peak Memory Usage: 57 MB
+
+
+timing -sethld -sp High-Performance_1.2V -hsp m -v 10 -u 10 -endpoints 10 -nperend 1  -html -rpt "AlarmModule_Alarm.tw1" "AlarmModule_Alarm_map.udb" 
+timing -sethld -sp High-Performance_1.2V -hsp m -v 10 -u 10 -endpoints 10 -nperend 1 -html -rpt AlarmModule_Alarm.tw1 AlarmModule_Alarm_map.udb -gui
+Starting design reading...
+Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/3.0/ispfpga.
+Package Status:                     Preliminary    Version 1.5.
+Performance Hardware Data Status:   Advanced       Version 1.0.
+Loading udb::Database ...
+Design:  MainModule
+Family:  iCE40UP
+Device:  iCE40UP5K
+Package: SG48
+Performance Grade:   High-Performance_1.2V
+
+
+
+Successfully loading udb, 0.08 seconds
+
+Initializing timer
+Starting design annotation....
+31 pins removed from timing;  check file physicalTimingIgnoredPins.log
+High-Performance_1.2V
+
+Starting full timing analysis...
+Performance Hardware Data Status:   Advanced       Version 1.0.
+Connections ignored  102  counted  906  covered  869
+Changing speed to m
+
+Starting full timing analysis...
+
+STA Runtime and Peak Memory Usage :
+Total CPU Time: 1 secs 
+Total REAL Time: 2 secs 
+Peak Memory Usage: 64 MB
+
+ 1.240340s wall, 0.953125s user + 0.312500s system = 1.265625s CPU (102.0%)
+
+
+par -f "AlarmModule_Alarm.p2t" "AlarmModule_Alarm_map.udb" "AlarmModule_Alarm.udb"
+
+Lattice Place and Route Report for Design "AlarmModule_Alarm_map.udb"
+Thu Nov 18 23:40:46 2021
+
+PAR: Place And Route Radiant Software (64-bit) 3.0.0.24.1.
+Command Line: par -w -t 1 -cores 1 -exp parPathBased=ON \
+	AlarmModule_Alarm_map.udb AlarmModule_Alarm_par.dir/5_1.udb 
+
+Loading AlarmModule_Alarm_map.udb ...
+Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/3.0/ispfpga.
+Package Status:                     Preliminary    Version 1.5.
+Performance Hardware Data Status:   Advanced       Version 1.0.
+
+
+
+Design:  MainModule
+Family:  iCE40UP
+Device:  iCE40UP5K
+Package: SG48
+Performance Grade:   High-Performance_1.2V
+Number of Signals: 452
+Number of Connections: 1027
+Device utilization summary:
+
+   SLICE (est.)     143/2640          5% used
+     LUT            265/5280          5% used
+     REG            100/5280          1% used
+   PIO               10/56           17% used
+                     10/36           27% bonded
+   IOLOGIC            1/56            1% used
+   DSP                0/8             0% used
+   I2C                0/2             0% used
+   HFOSC              0/1             0% used
+   LFOSC              1/1           100% used
+   LEDDA_IP           0/1             0% used
+   RGBA_DRV           0/1             0% used
+   FILTER             0/2             0% used
+   SRAM               0/4             0% used
+   WARMBOOT           0/1             0% used
+   SPI                0/2             0% used
+   EBR                0/30            0% used
+   PLL                0/1             0% used
+   RGBOUTBUF          0/3             0% used
+   I3C                0/2             0% used
+   OPENDRAIN          0/3             0% used
+
+Pin Constraint Summary:
+   10 out of 10 pins locked (100% locked).
+
+Finished Placer Phase 0 (HIER). CPU time: 1 secs , REAL time: 0 secs 
+
+
+................
+Finished Placer Phase 0 (AP).  CPU time: 1 secs , REAL time: 2 secs 
+
+Starting Placer Phase 1. CPU time: 1 secs , REAL time: 2 secs 
+..  ..
+....................
+
+Placer score = 37643.
+
+Device SLICE utilization summary after final SLICE packing:
+   SLICE            140/2640          5% used
+
+Finished Placer Phase 1. CPU time: 13 secs , REAL time: 14 secs 
+
+Starting Placer Phase 2.
+.
+
+Placer score =  45048
+Finished Placer Phase 2.  CPU time: 13 secs , REAL time: 14 secs 
+
+
+------------------ Clock Report ------------------
+
+Global Clocks :
+  PRIMARY "SERCLK_OUT_c" from comp "OSCInst1" on site "LFOSC_R26C32", clk load = 56, ce load = 0, sr load = 0
+
+  PRIMARY  : 1 out of 8 (12%)
+
+--------------- End of Clock Report ---------------
+
+
+I/O Usage Summary (final):
+   10 out of 56 (17.9%) I/O sites used.
+   10 out of 36 (27.8%) bonded I/O sites used.
+   Number of I/O comps: 10; differential: 0
+   Number of Vref pins used: 0
+
+I/O Bank Usage Summary:
++----------+---------------+------------+------------+------------+
+| I/O Bank | Usage         | Bank Vccio | Bank Vref1 | Bank Vref2 |
++----------+---------------+------------+------------+------------+
+| 0        | 6 / 14 ( 42%) | 3.3V       |            |            |
+| 1        | 0 / 14 (  0%) | OFF        |            |            |
+| 2        | 4 / 8 ( 50%)  | 3.3V       |            |            |
++----------+---------------+------------+------------+------------+
+
+Total Placer CPU time: 13 secs , REAL time: 14 secs 
+
+Writing design to file AlarmModule_Alarm_par.dir/5_1.udb ...
+
+
+Start NBR router at 23:41:00 11/18/21
+
+*****************************************************************
+Info: NBR allows conflicts(one node used by more than one signal)
+      in the earlier iterations. In each iteration, it tries to  
+      solve the conflicts while keeping the critical connections 
+      routed as short as possible. The routing process is said to
+      be completed when no conflicts exist and all connections   
+      are routed.                                                
+Note: NBR uses a different method to calculate timing slacks. The
+      worst slack and total negative slack may not be the same as
+      that in timing report. You should always run the timing    
+      tool to verify your design.                                
+*****************************************************************
+
+Starting routing resource preassignment
+Preassignment Summary:
+--------------------------------------------------------------------------------
+176 connections routed with dedicated routing resources
+1 global clock signals routed
+232 connections routed (of 971 total) (23.89%)
+---------------------------------------------------------
+Clock routing summary:
+Primary clocks (1 used out of 8 available):
+#5  Signal "SERCLK_OUT_c"
+       Clock   loads: 56    out of    56 routed (100.00%)
+       Data    loads: 0     out of     1 routed (  0.00%)
+Other clocks:
+    Signal "KB_RECV_c"
+       Clock   loads: 0     out of     1 routed (  0.00%)
+---------------------------------------------------------
+--------------------------------------------------------------------------------
+Completed routing resource preassignment
+    TimerIf::skewscore 0
+
+Start NBR section for initial routing at 23:41:00 11/18/21
+Level 4, iteration 1
+6(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 99971.752ns/0.000ns; real time: 0 secs 
+
+Info: Initial congestion level at 75.00% usage is 0
+Info: Initial congestion area  at 75.00% usage is 0 (0.00%)
+
+Start NBR section for normal routing at 23:41:01 11/18/21
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 99971.616ns/0.000ns; real time: 0 secs 
+
+Start NBR section for setup/hold timing optimization with effort level 3 at 23:41:01 11/18/21
+Changing speed to M
+
+Starting full timing analysis...
+Changing speed to 6
+
+Start NBR section for post-routing at 23:41:02 11/18/21
+
+End NBR router with 0 unrouted connection
+
+NBR Summary
+-----------
+  Number of unrouted connections : 0 (0.00%)
+  Number of connections with timing violations : 0 (0.00%)
+  Estimated worst slack<setup> : <n/a>
+  Timing score<setup> : 0
+-----------
+Notes: The timing info is calculated for SETUP only.
+
+
+Changing speed to M
+
+Starting full timing analysis...
+Changing speed to 6
+Total CPU time 2 secs 
+Total REAL time: 2 secs 
+Completely routed.
+End of route.  971 routed (100.00%); 0 unrouted.
+
+Writing design to file AlarmModule_Alarm_par.dir/5_1.udb ...
+
+
+PAR_SUMMARY::Run status = Completed
+PAR_SUMMARY::Number of unrouted conns = 0
+PAR_SUMMARY::Worst  slack<setup/<ns>> = 99971.616
+PAR_SUMMARY::Timing score<setup/<ns>> = 0.000
+PAR_SUMMARY::Worst  slack<hold /<ns>> = 1.719
+PAR_SUMMARY::Timing score<hold /<ns>> = 0.000
+PAR_SUMMARY::Number of errors = 0
+
+Total CPU  Time: 16 secs 
+Total REAL Time: 17 secs 
+Peak Memory Usage: 108 MB
+
+
+par done!
+
+Note: user must run 'timing' for timing closure signoff.
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2021 Lattice Semiconductor Corporation,  All rights reserved.
+
+timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -sp High-Performance_1.2V -hsp m  -pwrprd -html -rpt "AlarmModule_Alarm.twr" "AlarmModule_Alarm.udb" 
+timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -sp High-Performance_1.2V -hsp m -pwrprd -html -rpt AlarmModule_Alarm.twr AlarmModule_Alarm.udb -gui
+Starting design reading...
+Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/3.0/ispfpga.
+Package Status:                     Preliminary    Version 1.5.
+Performance Hardware Data Status:   Advanced       Version 1.0.
+Loading udb::Database ...
+Design:  MainModule
+Family:  iCE40UP
+Device:  iCE40UP5K
+Package: SG48
+Performance Grade:   High-Performance_1.2V
+
+
+
+Successfully loading udb, 0.12 seconds
+
+Initializing timer
+Starting design annotation....
+31 pins removed from timing;  check file physicalTimingIgnoredPins.log
+High-Performance_1.2V
+
+Starting full timing analysis...
+Performance Hardware Data Status:   Advanced       Version 1.0.
+Connections ignored  58  counted  895  covered  855
+Changing speed to m
+
+Starting full timing analysis...
+
+STA Runtime and Peak Memory Usage :
+Total CPU Time: 1 secs 
+Total REAL Time: 0 secs 
+Peak Memory Usage: 90 MB
+
+ 1.750216s wall, 1.421875s user + 0.328125s system = 1.750000s CPU (100.0%)
+
+
+tmcheck -par "AlarmModule_Alarm.par" 
+
+bitgen -w "AlarmModule_Alarm.udb" -f "AlarmModule_Alarm.t2b" 
+Loading AlarmModule_Alarm.udb ...
+Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/3.0/ispfpga.
+Package Status:                     Preliminary    Version 1.5.
+Performance Hardware Data Status:   Advanced       Version 1.0.
+
+
+
+Design:  MainModule
+Family:  iCE40UP
+Device:  iCE40UP5K
+Package: SG48
+Performance Grade:   High-Performance_1.2V
+Successfully loading design udb and device data from disks and to up-layer in CPU time: 0 secs , REAL time: 0 secs 
+
+
+
+BITGEN: Bitstream Generator Radiant Software (64-bit) 3.0.0.24.1
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2021 Lattice Semiconductor Corporation,  All rights reserved.
+
+
+Running DRC.
+DRC detected 0 errors and 0 warnings.
+
+Preference Summary:
++---------------------------------+---------------------------------+
+|  Preference                     |  Current Setting                |
++---------------------------------+---------------------------------+
+ *  Default setting.
+ ** The specified setting matches the default setting.
+
+
+Creating bit map...
+Saving bit stream in "D:\Users\nicob\Desktop\TP2_E3-G2\AlarmModule\Alarm\AlarmModule_Alarm.bin".
+Bitstream generation complete!
+
+Total CPU Time: 1 secs 
+Total REAL Time: 0 secs 
+Peak Memory Usage: 107 MB
+
+
+ibisgen "AlarmModule_Alarm.udb" "C:/lscc/radiant/3.0/cae_library/ibis/iCE40UP.ibs"
+IBIS Models Generator: Lattice Radiant Software (64-bit) 3.0.0.24.1
+
+Thu Nov 18 23:41:06 2021
+
+Loading AlarmModule_Alarm.udb ...
+Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/3.0/ispfpga.
+Package Status:                     Preliminary    Version 1.5.
+Performance Hardware Data Status:   Advanced       Version 1.0.
+
+
+
+Design:  MainModule
+Family:  iCE40UP
+Device:  iCE40UP5K
+Package: SG48
+Performance Grade:   High-Performance_1.2V
+Successfully loading design udb and device data from disks and to up-layer in CPU time: 0 secs , REAL time: 0 secs 
+
+Created design models.
+
+
+Generating: D:\Users\nicob\Desktop\TP2_E3-G2\AlarmModule\Alarm\IBIS\AlarmModule_Alarm.ibs
+
+
+INFO - Design IBIS models are generated for board level analysis.
+
+backanno "AlarmModule_Alarm.udb"  -o "AlarmModule_Alarm_vo.vo"      -sp "High-Performance_1.2V"  -w -neg
+backanno: version Radiant Software (64-bit) 3.0.0.24.1
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2021 Lattice Semiconductor Corporation,  All rights reserved.
+
+Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/3.0/ispfpga.
+Package Status:                     Preliminary    Version 1.5.
+Loading udb::Database ...
+Design:  MainModule
+Family:  iCE40UP
+Device:  iCE40UP5K
+Package: SG48
+Performance Grade:   High-Performance_1.2V
+Performance Hardware Data Status:   Advanced       Version 1.0.
+
+
+
+Writing a verilog netlist based on the AlarmModule_Alarm design file.
+
+Writing Verilog netlist to file AlarmModule_Alarm_vo.vo
+Writing SDF timing to file AlarmModule_Alarm_vo.sdf
+Backanno finished with 0 posted error messages.
+Total CPU Time: 1 secs 
+Total REAL Time: 2 secs 
+Peak Memory Usage: 85 MB

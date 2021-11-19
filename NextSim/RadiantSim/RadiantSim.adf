@@ -1,0 +1,48 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=4
+Current Config=compile
+
+[Configurations]
+compile=RadiantSim
+
+[Library]
+RadiantSim=.\RadiantSim\RadiantSim.lib
+
+[$LibMap$]
+RadiantSim=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VERILOG
+REFRESH_FLOW=1
+FLOWTOOLS=NONE
+FAMILY=
+fileopenfolder=D:\Users\nicob\Desktop\TP2_E3-G2\NextSim\RadiantSim\src
+
+[Files.Data]
+.\src\codeCheck.v=Verilog Source Code
+.\src\easySerialOut.v=Verilog Source Code
+.\src\MainModule.v=Verilog Source Code
+.\src\MainTestBench.v=Verilog Source Code
+.\src\serialOut.v=Verilog Source Code
+.\src\timer.v=Verilog Source Code
+.\src\SimOut.awc=Accelerated Waveform Configuration
+
+[Files]
+/MainTestBench.v=-1
+/MainModule.v=-1
+/codeCheck.v=-1
+/easySerialOut.v=-1
+/serialOut.v=-1
+/timer.v=-1
+
+/SimOut.awc=-1
+[SpecTracer]
+WindowVisible=0
+[HierarchyViewer]
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=

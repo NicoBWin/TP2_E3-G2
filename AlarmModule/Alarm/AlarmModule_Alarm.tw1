@@ -1,0 +1,1366 @@
+Lattice Timing Report -  Setup  and Hold, Version Radiant Software (64-bit) 3.0.0.24.1
+
+Thu Nov 18 23:40:45 2021
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2021 Lattice Semiconductor Corporation,  All rights reserved.
+
+Command line:    timing -sethld -sp High-Performance_1.2V -hsp m -v 10 -u 10 -endpoints 10 -nperend 1 -html -rpt AlarmModule_Alarm.tw1 AlarmModule_Alarm_map.udb -gui
+
+-----------------------------------------
+Design:          MainModule
+Family:          iCE40UP
+Device:          iCE40UP5K
+Package:         SG48
+Performance:     High-Performance_1.2V
+Package Status:                     Preliminary    Version 1.5
+*Performance Hardware Data Status :   Advanced Version 1.0
+-----------------------------------------
+
+
+=====================================================================
+                    Table of Contents
+=====================================================================
+    1  DESIGN CHECKING
+        1.1  SDC Constraints
+        1.2  Combinational Loop
+    2  CLOCK SUMMARY
+        2.1  Clock SERCLK_OUT_c
+    3  TIMING ANALYSIS SUMMARY
+        3.1  Overall (Setup and Hold)
+            3.1.1  Constraint Coverage
+            3.1.2  Timing Errors
+            3.1.3  Total Timing Score
+        3.2  Setup Summary Report
+        3.3  Hold Summary Report
+        3.4  Unconstrained Report
+            3.4.1  Unconstrained Start/End Points
+            3.4.2  Start/End Points Without Timing Constraints
+    4  DETAILED REPORT
+        4.1  Setup Detailed Report
+        4.2  Hold Detailed Report
+
+=====================================================================
+                    End of Table of Contents
+=====================================================================
+
+==============================================
+1  DESIGN CHECKING
+==============================================
+
+1.1  SDC Constraints
+=====================
+create_clock -name {SERCLK_OUT_c} -period 100000 [get_pins {OSCInst1/CLKLF }] 
+
+Operating conditions:
+--------------------
+    Temperature: 85
+    Core voltage: 1.14 V
+
+1.2  Combinational Loop
+========================
+Combinational Loops
+-------------------
+++++ Loop1
+i495_3_lut/A	->	i495_3_lut/Z
+
+++++ Loop2
+i493_3_lut_4_lut/A	->	i493_3_lut_4_lut/Z
+
+++++ Loop3
+i497_4_lut/A	->	i497_4_lut/Z
+
+++++ Loop4
+i1_4_lut/B	->	i1_4_lut/Z
+
+++++ Loop5
+i513_3_lut/A	->	i513_3_lut/Z
+
+++++ Loop6
+keyboard/i519_3_lut/A	->	keyboard/i519_3_lut/Z
+
+++++ Loop7
+keyboard/i517_3_lut/A	->	keyboard/i517_3_lut/Z
+
+++++ Loop8
+keyboard/i515_3_lut/A	->	keyboard/i515_3_lut/Z
+
+++++ Loop9
+keyboard/i521_3_lut/A	->	keyboard/i521_3_lut/Z
+
+++++ Loop10
+keyboard/i501_3_lut/A	->	keyboard/i501_3_lut/Z
+
+++++ Loop11
+keyboard/i499_3_lut/A	->	keyboard/i499_3_lut/Z
+
+++++ Loop12
+keyboard/i503_3_lut/A	->	keyboard/i503_3_lut/Z
+
+++++ Loop13
+keyboard/i505_3_lut/A	->	keyboard/i505_3_lut/Z
+
+++++ Loop14
+keyboard/i1_2_lut/Z	->	keyboard/i12_4_lut/Z
+
+++++ Loop15
+keyboard/i507_4_lut/A	->	keyboard/i507_4_lut/Z
+
+==============================================
+2  CLOCK SUMMARY
+==============================================
+
+2.1 Clock "SERCLK_OUT_c"
+=======================
+create_clock -name {SERCLK_OUT_c} -period 100000 [get_pins {OSCInst1/CLKLF }] 
+
+Single Clock Domain
+-------------------------------------------------------------------------------------------------------
+           Clock SERCLK_OUT_c           |                    |       Period       |     Frequency      
+-------------------------------------------------------------------------------------------------------
+ From SERCLK_OUT_c                      |             Target |      100000.000 ns |          0.010 MHz 
+                                        | Actual (all paths) |      100000.000 ns |          0.010 MHz 
+OSCInst1/CLKLF (MPW)                    |   (50% duty cycle) |      100000.000 ns |          0.010 MHz 
+-------------------------------------------------------------------------------------------------------
+
+Clock Domain Crossing
+
+==============================================
+3  TIMING ANALYSIS SUMMARY
+==============================================
+
+3.1  Overall (Setup and Hold)
+==============================
+
+3.1.1  Constraint Coverage
+---------------------------
+Constraint Coverage: 95.9161%
+
+3.1.2  Timing Errors
+---------------------
+Timing Errors: 0 endpoints (setup), 0 endpoints (hold)
+
+3.1.3  Total Timing Score
+--------------------------
+Total Negative Slack: 0.000 ns (setup), 0.000 ns (hold)
+
+3.2  Setup Summary Report
+==========================
+
+-------------------------------------------------------
+          Listing 10 End Points          |    Slack    
+-------------------------------------------------------
+Sreg_i0/D                                |99962.682 ns 
+mainTimer/clkCont_i10/SR                 |99970.590 ns 
+mainTimer/clkCont_i11/SR                 |99970.590 ns 
+mainTimer/clkCont_i12/SR                 |99970.590 ns 
+mainTimer/clkCont_i13/SR                 |99970.590 ns 
+mainTimer/clkCont_i14/SR                 |99970.590 ns 
+mainTimer/clkCont_i15/SR                 |99970.590 ns 
+mainTimer/clkCont_i16/SR                 |99970.590 ns 
+mainTimer/clkCont_i17/SR                 |99970.590 ns 
+mainTimer/state/SR                       |99970.590 ns 
+-------------------------------------------------------
+                                         |             
+Setup # of endpoints with negative slack:|           0 
+                                         |             
+-------------------------------------------------------
+
+3.3  Hold Summary Report
+=========================
+
+-------------------------------------------------------
+          Listing 10 End Points          |    Slack    
+-------------------------------------------------------
+STATE_OUT/serial/status_send/DO0         |    2.843 ns 
+mainTimer/clkCont_i15/D                  |    3.092 ns 
+mainTimer/clkCont_i16/D                  |    3.092 ns 
+mainTimer/clkCont_i17/D                  |    3.092 ns 
+mainTimer/state/D                        |    3.092 ns 
+keyboard/state_i1/D                      |    3.092 ns 
+STATE_OUT/serial/j__i0/D                 |    3.092 ns 
+STATE_OUT/serial/j__i1/D                 |    3.092 ns 
+STATE_OUT/j__i0/D                        |    3.092 ns 
+STATE_OUT/j__i1/D                        |    3.092 ns 
+-------------------------------------------------------
+                                         |             
+Hold # of endpoints with negative slack: |           0 
+                                         |             
+-------------------------------------------------------
+
+3.4  Unconstrained Report
+===========================
+
+3.4.1  Unconstrained Start/End Points
+--------------------------------------
+
+Clocked but unconstrained timing start points
+-------------------------------------------------------------------
+         Listing 2 Start Points         |           Type           
+-------------------------------------------------------------------
+STATE_OUT/serial/status_out/Q           |          No required time
+STATE_OUT/serial/status_send/PADDO      |          No required time
+-------------------------------------------------------------------
+                                        |                          
+Number of unconstrained timing start po |                          
+ints                                    |                         2
+                                        |                          
+-------------------------------------------------------------------
+
+Clocked but unconstrained timing end points
+-------------------------------------------------------------------
+          Listing 4 End Points          |           Type           
+-------------------------------------------------------------------
+Sreg_i1/SR                              |           No arrival time
+Sreg_i0/SR                              |           No arrival time
+STATE_OUT/serial/temp_data_out_i0_i0/D  |           No arrival time
+STATE_OUT/serial/temp_data_out_i0_i1/D  |           No arrival time
+-------------------------------------------------------------------
+                                        |                          
+Number of unconstrained timing end poin |                          
+ts                                      |                         4
+                                        |                          
+-------------------------------------------------------------------
+
+3.4.2  Start/End Points Without Timing Constraints
+---------------------------------------------------
+
+I/O ports without constraint
+----------------------------
+Possible constraints to use on I/O ports are:
+set_input_delay,
+set_output_delay,
+set_max_delay,
+create_clock,
+create_generated_clock,
+...
+
+-------------------------------------------------------------------
+     Listing 10 Start or End Points     |           Type           
+-------------------------------------------------------------------
+SENSOR1_IN                              |                     input
+SENSOR2_IN                              |                     input
+KB_IN[1]                                |                     input
+KB_IN[0]                                |                     input
+KB_RECV                                 |                     input
+RESET_IN                                |                     input
+STATUS_SEND                             |                    output
+STATUS_OUT                              |                    output
+SIREN_OUT                               |                    output
+SERCLK_OUT                              |                    output
+-------------------------------------------------------------------
+                                        |                          
+Number of I/O ports without constraint  |                        10
+                                        |                          
+-------------------------------------------------------------------
+
+Registers without clock definition
+Define the clock for these registers.
+-------------------------------------------------------------------
+         Listing 2 Instance(s)          |           Type           
+-------------------------------------------------------------------
+keyboard/counter_153__i1                |                  No Clock
+keyboard/counter_153__i0                |                  No Clock
+-------------------------------------------------------------------
+                                        |                          
+Number of registers without clock defin |                          
+ition                                   |                         2
+                                        |                          
+-------------------------------------------------------------------
+
+==============================================
+4  DETAILED REPORT
+==============================================
+
+4.1  Setup Detailed Report
+===========================
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Detail report of critical paths
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+                    Detailed Report for timing paths 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : keyboard/state_i0/Q  (SLICE)
+Path End         : Sreg_i0/D  (SLICE)
+Source Clock     : SERCLK_OUT_c (R)
+Destination Clock: SERCLK_OUT_c (R)
+Logic Level      : 15
+Delay Ratio      : 78.3% (route), 21.7% (logic)
+Clock Skew       : 0.000 ns
+Setup Constraint : 100000.000 ns 
+Path Slack       : 99962.682 ns  (Passed)
+
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+OSCInst1/CLKLF                            LFOSC           CLOCK LATENCY  0.000         0.000  101     
+STATE_OUT/serial/SERCLK_OUT_c                             NET DELAY      4.150         4.150  101     
+
+
+
+keyboard/state_i0/CK->keyboard/state_i0/Q
+                                          SLICE           CLK_TO_Q0_DELAY  1.391         5.541  12      
+keyboard/state[0]                                         NET DELAY        2.075         7.616  12      
+keyboard/i2_3_lut_4_lut_adj_41/C->keyboard/i2_3_lut_4_lut_adj_41/Z
+                                          SLICE           C0_TO_F0_DELAY   0.477         8.093  2       
+keyboard/n1765                                            NET DELAY        2.075        10.168  2       
+keyboard/i505_3_lut/C->keyboard/i505_3_lut/Z
+                                          SLICE           C0_TO_F0_DELAY   0.477        10.645  2       
+keyboard/actualKey[3][0]                                  NET DELAY        2.075        12.720  2       
+keyboard/i1664_4_lut/A->keyboard/i1664_4_lut/Z
+                                          SLICE           A0_TO_F0_DELAY   0.477        13.197  1       
+keyboard/n2122                                            NET DELAY        2.075        15.272  1       
+i5_4_lut/C->i5_4_lut/Z                    SLICE           C0_TO_F0_DELAY   0.477        15.749  1       
+n12                                                       NET DELAY        2.075        17.824  1       
+i6_4_lut/B->i6_4_lut/Z                    SLICE           B0_TO_F0_DELAY   0.477        18.301  11      
+KEY_STATUS[1]                                             NET DELAY        2.075        20.376  11      
+KEY_STATUS_1__I_0_i3_3_lut_3_lut/A->KEY_STATUS_1__I_0_i3_3_lut_3_lut/Z
+                                          SLICE           A0_TO_F0_DELAY   0.477        20.853  3       
+TIMER_EN_N_26                                             NET DELAY        2.075        22.928  3       
+i3_4_lut/B->i3_4_lut/Z                    SLICE           B0_TO_F0_DELAY   0.477        23.405  3       
+TIMER_EN_N_22                                             NET DELAY        2.075        25.480  3       
+Mux_85_i1_3_lut_3_lut_4_lut/C->Mux_85_i1_3_lut_3_lut_4_lut/Z
+                                          SLICE           C0_TO_F0_DELAY   0.477        25.957  1       
+n1                                                        NET DELAY        2.075        28.032  1       
+Mux_85_i3_4_lut/A->Mux_85_i3_4_lut/Z      SLICE           A0_TO_F0_DELAY   0.477        28.509  1       
+PREV_KEY_1__N_7                                           NET DELAY        2.075        30.584  1       
+i493_3_lut_4_lut/D->i493_3_lut_4_lut/Z    SLICE           D0_TO_F0_DELAY   0.477        31.061  2       
+PREV_KEY[0]                                               NET DELAY        2.075        33.136  2       
+mux_23_i1_4_lut/A->mux_23_i1_4_lut/Z      SLICE           A0_TO_F0_DELAY   0.477        33.613  1       
+Snext_1__N_12[0]                                          NET DELAY        2.075        35.688  1       
+n2700_bdd_4_lut_4_lut/C->n2700_bdd_4_lut_4_lut/Z
+                                          SLICE           C0_TO_F0_DELAY   0.477        36.165  2       
+Snext_1__N_1[0]                                           NET DELAY        2.075        38.240  2       
+i495_3_lut/B->i495_3_lut/Z                SLICE           B0_TO_F0_DELAY   0.477        38.717  2       
+Snext[0]                                                  NET DELAY        2.075        40.792  2       
+SLICE_45/A0->SLICE_45/F0                  SLICE           A0_TO_F0_DELAY   0.477        41.269  1       
+Snext[0]$n1 ( DI0 )                                       NET DELAY        0.000        41.269  1       
+
+
+                                                          CONSTRAINT     0.000    100000.000  1       
+OSCInst1/CLKLF                            LFOSC           CLOCK LATENCY  0.000    100000.000  101     
+STATE_OUT/serial/SERCLK_OUT_c ( CLK )                     NET DELAY      4.150    100004.150  101     
+                                                          Uncertainty    0.000    100004.150  
+                                                          Setup time     0.199    100003.951  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+Required Time                                                                     100003.951  
+Arrival Time                                                                         -41.269  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+Path Slack  (Passed)                                                               99962.682  
+
+
+
+
+++++ Path 2 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : keyboard/state_i0/Q  (SLICE)
+Path End         : mainTimer/clkCont_i10/SR  (SLICE)
+Source Clock     : SERCLK_OUT_c (R)
+Destination Clock: SERCLK_OUT_c (R)
+Logic Level      : 11
+Delay Ratio      : 78.7% (route), 21.3% (logic)
+Clock Skew       : 0.000 ns
+Setup Constraint : 100000.000 ns 
+Path Slack       : 99970.590 ns  (Passed)
+
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+OSCInst1/CLKLF                            LFOSC           CLOCK LATENCY  0.000         0.000  101     
+STATE_OUT/serial/SERCLK_OUT_c                             NET DELAY      4.150         4.150  101     
+
+
+
+keyboard/state_i0/CK->keyboard/state_i0/Q
+                                          SLICE           CLK_TO_Q0_DELAY  1.391         5.541  12      
+keyboard/state[0]                                         NET DELAY        2.075         7.616  12      
+keyboard/i2_3_lut_4_lut_adj_41/C->keyboard/i2_3_lut_4_lut_adj_41/Z
+                                          SLICE           C0_TO_F0_DELAY   0.477         8.093  2       
+keyboard/n1765                                            NET DELAY        2.075        10.168  2       
+keyboard/i505_3_lut/C->keyboard/i505_3_lut/Z
+                                          SLICE           C0_TO_F0_DELAY   0.477        10.645  2       
+keyboard/actualKey[3][0]                                  NET DELAY        2.075        12.720  2       
+keyboard/i1664_4_lut/A->keyboard/i1664_4_lut/Z
+                                          SLICE           A0_TO_F0_DELAY   0.477        13.197  1       
+keyboard/n2122                                            NET DELAY        2.075        15.272  1       
+i5_4_lut/C->i5_4_lut/Z                    SLICE           C0_TO_F0_DELAY   0.477        15.749  1       
+n12                                                       NET DELAY        2.075        17.824  1       
+i6_4_lut/B->i6_4_lut/Z                    SLICE           B0_TO_F0_DELAY   0.477        18.301  11      
+KEY_STATUS[1]                                             NET DELAY        2.075        20.376  11      
+KEY_STATUS_1__I_0_i3_3_lut_3_lut/A->KEY_STATUS_1__I_0_i3_3_lut_3_lut/Z
+                                          SLICE           A0_TO_F0_DELAY   0.477        20.853  3       
+TIMER_EN_N_26                                             NET DELAY        2.075        22.928  3       
+i3_4_lut/B->i3_4_lut/Z                    SLICE           B0_TO_F0_DELAY   0.477        23.405  3       
+TIMER_EN_N_22                                             NET DELAY        2.075        25.480  3       
+Sreg_1__I_0_i3_4_lut/A->Sreg_1__I_0_i3_4_lut/Z
+                                          SLICE           A0_TO_F0_DELAY   0.477        25.957  1       
+TIMER_EN_N_17                                             NET DELAY        2.075        28.032  1       
+i497_4_lut/C->i497_4_lut/Z                SLICE           C0_TO_F0_DELAY   0.477        28.509  2       
+mainTimer/TIMER_EN                                        NET DELAY        2.075        30.584  2       
+mainTimer/EN_I_0_1_lut/A->mainTimer/EN_I_0_1_lut/Z
+                                          SLICE           A0_TO_F0_DELAY   0.477        31.061  19      
+mainTimer/clkCont_17__N_49 ( LSR )                        NET DELAY        2.075        33.136  19      
+
+
+                                                          CONSTRAINT     0.000    100000.000  1       
+OSCInst1/CLKLF                            LFOSC           CLOCK LATENCY  0.000    100000.000  101     
+STATE_OUT/serial/SERCLK_OUT_c ( CLK )                     NET DELAY      4.150    100004.150  101     
+                                                          Uncertainty    0.000    100004.150  
+                                                          Setup time     0.424    100003.726  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+Required Time                                                                     100003.726  
+Arrival Time                                                                         -33.136  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+Path Slack  (Passed)                                                               99970.590  
+
+
+
+
+++++ Path 3 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : keyboard/state_i0/Q  (SLICE)
+Path End         : mainTimer/clkCont_i11/SR  (SLICE)
+Source Clock     : SERCLK_OUT_c (R)
+Destination Clock: SERCLK_OUT_c (R)
+Logic Level      : 11
+Delay Ratio      : 78.7% (route), 21.3% (logic)
+Clock Skew       : 0.000 ns
+Setup Constraint : 100000.000 ns 
+Path Slack       : 99970.590 ns  (Passed)
+
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+OSCInst1/CLKLF                            LFOSC           CLOCK LATENCY  0.000         0.000  101     
+STATE_OUT/serial/SERCLK_OUT_c                             NET DELAY      4.150         4.150  101     
+
+
+
+keyboard/state_i0/CK->keyboard/state_i0/Q
+                                          SLICE           CLK_TO_Q0_DELAY  1.391         5.541  12      
+keyboard/state[0]                                         NET DELAY        2.075         7.616  12      
+keyboard/i2_3_lut_4_lut_adj_41/C->keyboard/i2_3_lut_4_lut_adj_41/Z
+                                          SLICE           C0_TO_F0_DELAY   0.477         8.093  2       
+keyboard/n1765                                            NET DELAY        2.075        10.168  2       
+keyboard/i505_3_lut/C->keyboard/i505_3_lut/Z
+                                          SLICE           C0_TO_F0_DELAY   0.477        10.645  2       
+keyboard/actualKey[3][0]                                  NET DELAY        2.075        12.720  2       
+keyboard/i1664_4_lut/A->keyboard/i1664_4_lut/Z
+                                          SLICE           A0_TO_F0_DELAY   0.477        13.197  1       
+keyboard/n2122                                            NET DELAY        2.075        15.272  1       
+i5_4_lut/C->i5_4_lut/Z                    SLICE           C0_TO_F0_DELAY   0.477        15.749  1       
+n12                                                       NET DELAY        2.075        17.824  1       
+i6_4_lut/B->i6_4_lut/Z                    SLICE           B0_TO_F0_DELAY   0.477        18.301  11      
+KEY_STATUS[1]                                             NET DELAY        2.075        20.376  11      
+KEY_STATUS_1__I_0_i3_3_lut_3_lut/A->KEY_STATUS_1__I_0_i3_3_lut_3_lut/Z
+                                          SLICE           A0_TO_F0_DELAY   0.477        20.853  3       
+TIMER_EN_N_26                                             NET DELAY        2.075        22.928  3       
+i3_4_lut/B->i3_4_lut/Z                    SLICE           B0_TO_F0_DELAY   0.477        23.405  3       
+TIMER_EN_N_22                                             NET DELAY        2.075        25.480  3       
+Sreg_1__I_0_i3_4_lut/A->Sreg_1__I_0_i3_4_lut/Z
+                                          SLICE           A0_TO_F0_DELAY   0.477        25.957  1       
+TIMER_EN_N_17                                             NET DELAY        2.075        28.032  1       
+i497_4_lut/C->i497_4_lut/Z                SLICE           C0_TO_F0_DELAY   0.477        28.509  2       
+mainTimer/TIMER_EN                                        NET DELAY        2.075        30.584  2       
+mainTimer/EN_I_0_1_lut/A->mainTimer/EN_I_0_1_lut/Z
+                                          SLICE           A0_TO_F0_DELAY   0.477        31.061  19      
+mainTimer/clkCont_17__N_49 ( LSR )                        NET DELAY        2.075        33.136  19      
+
+
+                                                          CONSTRAINT     0.000    100000.000  1       
+OSCInst1/CLKLF                            LFOSC           CLOCK LATENCY  0.000    100000.000  101     
+STATE_OUT/serial/SERCLK_OUT_c ( CLK )                     NET DELAY      4.150    100004.150  101     
+                                                          Uncertainty    0.000    100004.150  
+                                                          Setup time     0.424    100003.726  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+Required Time                                                                     100003.726  
+Arrival Time                                                                         -33.136  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+Path Slack  (Passed)                                                               99970.590  
+
+
+
+
+++++ Path 4 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : keyboard/state_i0/Q  (SLICE)
+Path End         : mainTimer/clkCont_i12/SR  (SLICE)
+Source Clock     : SERCLK_OUT_c (R)
+Destination Clock: SERCLK_OUT_c (R)
+Logic Level      : 11
+Delay Ratio      : 78.7% (route), 21.3% (logic)
+Clock Skew       : 0.000 ns
+Setup Constraint : 100000.000 ns 
+Path Slack       : 99970.590 ns  (Passed)
+
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+OSCInst1/CLKLF                            LFOSC           CLOCK LATENCY  0.000         0.000  101     
+STATE_OUT/serial/SERCLK_OUT_c                             NET DELAY      4.150         4.150  101     
+
+
+
+keyboard/state_i0/CK->keyboard/state_i0/Q
+                                          SLICE           CLK_TO_Q0_DELAY  1.391         5.541  12      
+keyboard/state[0]                                         NET DELAY        2.075         7.616  12      
+keyboard/i2_3_lut_4_lut_adj_41/C->keyboard/i2_3_lut_4_lut_adj_41/Z
+                                          SLICE           C0_TO_F0_DELAY   0.477         8.093  2       
+keyboard/n1765                                            NET DELAY        2.075        10.168  2       
+keyboard/i505_3_lut/C->keyboard/i505_3_lut/Z
+                                          SLICE           C0_TO_F0_DELAY   0.477        10.645  2       
+keyboard/actualKey[3][0]                                  NET DELAY        2.075        12.720  2       
+keyboard/i1664_4_lut/A->keyboard/i1664_4_lut/Z
+                                          SLICE           A0_TO_F0_DELAY   0.477        13.197  1       
+keyboard/n2122                                            NET DELAY        2.075        15.272  1       
+i5_4_lut/C->i5_4_lut/Z                    SLICE           C0_TO_F0_DELAY   0.477        15.749  1       
+n12                                                       NET DELAY        2.075        17.824  1       
+i6_4_lut/B->i6_4_lut/Z                    SLICE           B0_TO_F0_DELAY   0.477        18.301  11      
+KEY_STATUS[1]                                             NET DELAY        2.075        20.376  11      
+KEY_STATUS_1__I_0_i3_3_lut_3_lut/A->KEY_STATUS_1__I_0_i3_3_lut_3_lut/Z
+                                          SLICE           A0_TO_F0_DELAY   0.477        20.853  3       
+TIMER_EN_N_26                                             NET DELAY        2.075        22.928  3       
+i3_4_lut/B->i3_4_lut/Z                    SLICE           B0_TO_F0_DELAY   0.477        23.405  3       
+TIMER_EN_N_22                                             NET DELAY        2.075        25.480  3       
+Sreg_1__I_0_i3_4_lut/A->Sreg_1__I_0_i3_4_lut/Z
+                                          SLICE           A0_TO_F0_DELAY   0.477        25.957  1       
+TIMER_EN_N_17                                             NET DELAY        2.075        28.032  1       
+i497_4_lut/C->i497_4_lut/Z                SLICE           C0_TO_F0_DELAY   0.477        28.509  2       
+mainTimer/TIMER_EN                                        NET DELAY        2.075        30.584  2       
+mainTimer/EN_I_0_1_lut/A->mainTimer/EN_I_0_1_lut/Z
+                                          SLICE           A0_TO_F0_DELAY   0.477        31.061  19      
+mainTimer/clkCont_17__N_49 ( LSR )                        NET DELAY        2.075        33.136  19      
+
+
+                                                          CONSTRAINT     0.000    100000.000  1       
+OSCInst1/CLKLF                            LFOSC           CLOCK LATENCY  0.000    100000.000  101     
+STATE_OUT/serial/SERCLK_OUT_c ( CLK )                     NET DELAY      4.150    100004.150  101     
+                                                          Uncertainty    0.000    100004.150  
+                                                          Setup time     0.424    100003.726  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+Required Time                                                                     100003.726  
+Arrival Time                                                                         -33.136  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+Path Slack  (Passed)                                                               99970.590  
+
+
+
+
+++++ Path 5 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : keyboard/state_i0/Q  (SLICE)
+Path End         : mainTimer/clkCont_i13/SR  (SLICE)
+Source Clock     : SERCLK_OUT_c (R)
+Destination Clock: SERCLK_OUT_c (R)
+Logic Level      : 11
+Delay Ratio      : 78.7% (route), 21.3% (logic)
+Clock Skew       : 0.000 ns
+Setup Constraint : 100000.000 ns 
+Path Slack       : 99970.590 ns  (Passed)
+
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+OSCInst1/CLKLF                            LFOSC           CLOCK LATENCY  0.000         0.000  101     
+STATE_OUT/serial/SERCLK_OUT_c                             NET DELAY      4.150         4.150  101     
+
+
+
+keyboard/state_i0/CK->keyboard/state_i0/Q
+                                          SLICE           CLK_TO_Q0_DELAY  1.391         5.541  12      
+keyboard/state[0]                                         NET DELAY        2.075         7.616  12      
+keyboard/i2_3_lut_4_lut_adj_41/C->keyboard/i2_3_lut_4_lut_adj_41/Z
+                                          SLICE           C0_TO_F0_DELAY   0.477         8.093  2       
+keyboard/n1765                                            NET DELAY        2.075        10.168  2       
+keyboard/i505_3_lut/C->keyboard/i505_3_lut/Z
+                                          SLICE           C0_TO_F0_DELAY   0.477        10.645  2       
+keyboard/actualKey[3][0]                                  NET DELAY        2.075        12.720  2       
+keyboard/i1664_4_lut/A->keyboard/i1664_4_lut/Z
+                                          SLICE           A0_TO_F0_DELAY   0.477        13.197  1       
+keyboard/n2122                                            NET DELAY        2.075        15.272  1       
+i5_4_lut/C->i5_4_lut/Z                    SLICE           C0_TO_F0_DELAY   0.477        15.749  1       
+n12                                                       NET DELAY        2.075        17.824  1       
+i6_4_lut/B->i6_4_lut/Z                    SLICE           B0_TO_F0_DELAY   0.477        18.301  11      
+KEY_STATUS[1]                                             NET DELAY        2.075        20.376  11      
+KEY_STATUS_1__I_0_i3_3_lut_3_lut/A->KEY_STATUS_1__I_0_i3_3_lut_3_lut/Z
+                                          SLICE           A0_TO_F0_DELAY   0.477        20.853  3       
+TIMER_EN_N_26                                             NET DELAY        2.075        22.928  3       
+i3_4_lut/B->i3_4_lut/Z                    SLICE           B0_TO_F0_DELAY   0.477        23.405  3       
+TIMER_EN_N_22                                             NET DELAY        2.075        25.480  3       
+Sreg_1__I_0_i3_4_lut/A->Sreg_1__I_0_i3_4_lut/Z
+                                          SLICE           A0_TO_F0_DELAY   0.477        25.957  1       
+TIMER_EN_N_17                                             NET DELAY        2.075        28.032  1       
+i497_4_lut/C->i497_4_lut/Z                SLICE           C0_TO_F0_DELAY   0.477        28.509  2       
+mainTimer/TIMER_EN                                        NET DELAY        2.075        30.584  2       
+mainTimer/EN_I_0_1_lut/A->mainTimer/EN_I_0_1_lut/Z
+                                          SLICE           A0_TO_F0_DELAY   0.477        31.061  19      
+mainTimer/clkCont_17__N_49 ( LSR )                        NET DELAY        2.075        33.136  19      
+
+
+                                                          CONSTRAINT     0.000    100000.000  1       
+OSCInst1/CLKLF                            LFOSC           CLOCK LATENCY  0.000    100000.000  101     
+STATE_OUT/serial/SERCLK_OUT_c ( CLK )                     NET DELAY      4.150    100004.150  101     
+                                                          Uncertainty    0.000    100004.150  
+                                                          Setup time     0.424    100003.726  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+Required Time                                                                     100003.726  
+Arrival Time                                                                         -33.136  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+Path Slack  (Passed)                                                               99970.590  
+
+
+
+
+++++ Path 6 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : keyboard/state_i0/Q  (SLICE)
+Path End         : mainTimer/clkCont_i14/SR  (SLICE)
+Source Clock     : SERCLK_OUT_c (R)
+Destination Clock: SERCLK_OUT_c (R)
+Logic Level      : 11
+Delay Ratio      : 78.7% (route), 21.3% (logic)
+Clock Skew       : 0.000 ns
+Setup Constraint : 100000.000 ns 
+Path Slack       : 99970.590 ns  (Passed)
+
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+OSCInst1/CLKLF                            LFOSC           CLOCK LATENCY  0.000         0.000  101     
+STATE_OUT/serial/SERCLK_OUT_c                             NET DELAY      4.150         4.150  101     
+
+
+
+keyboard/state_i0/CK->keyboard/state_i0/Q
+                                          SLICE           CLK_TO_Q0_DELAY  1.391         5.541  12      
+keyboard/state[0]                                         NET DELAY        2.075         7.616  12      
+keyboard/i2_3_lut_4_lut_adj_41/C->keyboard/i2_3_lut_4_lut_adj_41/Z
+                                          SLICE           C0_TO_F0_DELAY   0.477         8.093  2       
+keyboard/n1765                                            NET DELAY        2.075        10.168  2       
+keyboard/i505_3_lut/C->keyboard/i505_3_lut/Z
+                                          SLICE           C0_TO_F0_DELAY   0.477        10.645  2       
+keyboard/actualKey[3][0]                                  NET DELAY        2.075        12.720  2       
+keyboard/i1664_4_lut/A->keyboard/i1664_4_lut/Z
+                                          SLICE           A0_TO_F0_DELAY   0.477        13.197  1       
+keyboard/n2122                                            NET DELAY        2.075        15.272  1       
+i5_4_lut/C->i5_4_lut/Z                    SLICE           C0_TO_F0_DELAY   0.477        15.749  1       
+n12                                                       NET DELAY        2.075        17.824  1       
+i6_4_lut/B->i6_4_lut/Z                    SLICE           B0_TO_F0_DELAY   0.477        18.301  11      
+KEY_STATUS[1]                                             NET DELAY        2.075        20.376  11      
+KEY_STATUS_1__I_0_i3_3_lut_3_lut/A->KEY_STATUS_1__I_0_i3_3_lut_3_lut/Z
+                                          SLICE           A0_TO_F0_DELAY   0.477        20.853  3       
+TIMER_EN_N_26                                             NET DELAY        2.075        22.928  3       
+i3_4_lut/B->i3_4_lut/Z                    SLICE           B0_TO_F0_DELAY   0.477        23.405  3       
+TIMER_EN_N_22                                             NET DELAY        2.075        25.480  3       
+Sreg_1__I_0_i3_4_lut/A->Sreg_1__I_0_i3_4_lut/Z
+                                          SLICE           A0_TO_F0_DELAY   0.477        25.957  1       
+TIMER_EN_N_17                                             NET DELAY        2.075        28.032  1       
+i497_4_lut/C->i497_4_lut/Z                SLICE           C0_TO_F0_DELAY   0.477        28.509  2       
+mainTimer/TIMER_EN                                        NET DELAY        2.075        30.584  2       
+mainTimer/EN_I_0_1_lut/A->mainTimer/EN_I_0_1_lut/Z
+                                          SLICE           A0_TO_F0_DELAY   0.477        31.061  19      
+mainTimer/clkCont_17__N_49 ( LSR )                        NET DELAY        2.075        33.136  19      
+
+
+                                                          CONSTRAINT     0.000    100000.000  1       
+OSCInst1/CLKLF                            LFOSC           CLOCK LATENCY  0.000    100000.000  101     
+STATE_OUT/serial/SERCLK_OUT_c ( CLK )                     NET DELAY      4.150    100004.150  101     
+                                                          Uncertainty    0.000    100004.150  
+                                                          Setup time     0.424    100003.726  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+Required Time                                                                     100003.726  
+Arrival Time                                                                         -33.136  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+Path Slack  (Passed)                                                               99970.590  
+
+
+
+
+++++ Path 7 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : keyboard/state_i0/Q  (SLICE)
+Path End         : mainTimer/clkCont_i15/SR  (SLICE)
+Source Clock     : SERCLK_OUT_c (R)
+Destination Clock: SERCLK_OUT_c (R)
+Logic Level      : 11
+Delay Ratio      : 78.7% (route), 21.3% (logic)
+Clock Skew       : 0.000 ns
+Setup Constraint : 100000.000 ns 
+Path Slack       : 99970.590 ns  (Passed)
+
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+OSCInst1/CLKLF                            LFOSC           CLOCK LATENCY  0.000         0.000  101     
+STATE_OUT/serial/SERCLK_OUT_c                             NET DELAY      4.150         4.150  101     
+
+
+
+keyboard/state_i0/CK->keyboard/state_i0/Q
+                                          SLICE           CLK_TO_Q0_DELAY  1.391         5.541  12      
+keyboard/state[0]                                         NET DELAY        2.075         7.616  12      
+keyboard/i2_3_lut_4_lut_adj_41/C->keyboard/i2_3_lut_4_lut_adj_41/Z
+                                          SLICE           C0_TO_F0_DELAY   0.477         8.093  2       
+keyboard/n1765                                            NET DELAY        2.075        10.168  2       
+keyboard/i505_3_lut/C->keyboard/i505_3_lut/Z
+                                          SLICE           C0_TO_F0_DELAY   0.477        10.645  2       
+keyboard/actualKey[3][0]                                  NET DELAY        2.075        12.720  2       
+keyboard/i1664_4_lut/A->keyboard/i1664_4_lut/Z
+                                          SLICE           A0_TO_F0_DELAY   0.477        13.197  1       
+keyboard/n2122                                            NET DELAY        2.075        15.272  1       
+i5_4_lut/C->i5_4_lut/Z                    SLICE           C0_TO_F0_DELAY   0.477        15.749  1       
+n12                                                       NET DELAY        2.075        17.824  1       
+i6_4_lut/B->i6_4_lut/Z                    SLICE           B0_TO_F0_DELAY   0.477        18.301  11      
+KEY_STATUS[1]                                             NET DELAY        2.075        20.376  11      
+KEY_STATUS_1__I_0_i3_3_lut_3_lut/A->KEY_STATUS_1__I_0_i3_3_lut_3_lut/Z
+                                          SLICE           A0_TO_F0_DELAY   0.477        20.853  3       
+TIMER_EN_N_26                                             NET DELAY        2.075        22.928  3       
+i3_4_lut/B->i3_4_lut/Z                    SLICE           B0_TO_F0_DELAY   0.477        23.405  3       
+TIMER_EN_N_22                                             NET DELAY        2.075        25.480  3       
+Sreg_1__I_0_i3_4_lut/A->Sreg_1__I_0_i3_4_lut/Z
+                                          SLICE           A0_TO_F0_DELAY   0.477        25.957  1       
+TIMER_EN_N_17                                             NET DELAY        2.075        28.032  1       
+i497_4_lut/C->i497_4_lut/Z                SLICE           C0_TO_F0_DELAY   0.477        28.509  2       
+mainTimer/TIMER_EN                                        NET DELAY        2.075        30.584  2       
+mainTimer/EN_I_0_1_lut/A->mainTimer/EN_I_0_1_lut/Z
+                                          SLICE           A0_TO_F0_DELAY   0.477        31.061  19      
+mainTimer/clkCont_17__N_49 ( LSR )                        NET DELAY        2.075        33.136  19      
+
+
+                                                          CONSTRAINT     0.000    100000.000  1       
+OSCInst1/CLKLF                            LFOSC           CLOCK LATENCY  0.000    100000.000  101     
+STATE_OUT/serial/SERCLK_OUT_c ( CLK )                     NET DELAY      4.150    100004.150  101     
+                                                          Uncertainty    0.000    100004.150  
+                                                          Setup time     0.424    100003.726  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+Required Time                                                                     100003.726  
+Arrival Time                                                                         -33.136  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+Path Slack  (Passed)                                                               99970.590  
+
+
+
+
+++++ Path 8 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : keyboard/state_i0/Q  (SLICE)
+Path End         : mainTimer/clkCont_i16/SR  (SLICE)
+Source Clock     : SERCLK_OUT_c (R)
+Destination Clock: SERCLK_OUT_c (R)
+Logic Level      : 11
+Delay Ratio      : 78.7% (route), 21.3% (logic)
+Clock Skew       : 0.000 ns
+Setup Constraint : 100000.000 ns 
+Path Slack       : 99970.590 ns  (Passed)
+
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+OSCInst1/CLKLF                            LFOSC           CLOCK LATENCY  0.000         0.000  101     
+STATE_OUT/serial/SERCLK_OUT_c                             NET DELAY      4.150         4.150  101     
+
+
+
+keyboard/state_i0/CK->keyboard/state_i0/Q
+                                          SLICE           CLK_TO_Q0_DELAY  1.391         5.541  12      
+keyboard/state[0]                                         NET DELAY        2.075         7.616  12      
+keyboard/i2_3_lut_4_lut_adj_41/C->keyboard/i2_3_lut_4_lut_adj_41/Z
+                                          SLICE           C0_TO_F0_DELAY   0.477         8.093  2       
+keyboard/n1765                                            NET DELAY        2.075        10.168  2       
+keyboard/i505_3_lut/C->keyboard/i505_3_lut/Z
+                                          SLICE           C0_TO_F0_DELAY   0.477        10.645  2       
+keyboard/actualKey[3][0]                                  NET DELAY        2.075        12.720  2       
+keyboard/i1664_4_lut/A->keyboard/i1664_4_lut/Z
+                                          SLICE           A0_TO_F0_DELAY   0.477        13.197  1       
+keyboard/n2122                                            NET DELAY        2.075        15.272  1       
+i5_4_lut/C->i5_4_lut/Z                    SLICE           C0_TO_F0_DELAY   0.477        15.749  1       
+n12                                                       NET DELAY        2.075        17.824  1       
+i6_4_lut/B->i6_4_lut/Z                    SLICE           B0_TO_F0_DELAY   0.477        18.301  11      
+KEY_STATUS[1]                                             NET DELAY        2.075        20.376  11      
+KEY_STATUS_1__I_0_i3_3_lut_3_lut/A->KEY_STATUS_1__I_0_i3_3_lut_3_lut/Z
+                                          SLICE           A0_TO_F0_DELAY   0.477        20.853  3       
+TIMER_EN_N_26                                             NET DELAY        2.075        22.928  3       
+i3_4_lut/B->i3_4_lut/Z                    SLICE           B0_TO_F0_DELAY   0.477        23.405  3       
+TIMER_EN_N_22                                             NET DELAY        2.075        25.480  3       
+Sreg_1__I_0_i3_4_lut/A->Sreg_1__I_0_i3_4_lut/Z
+                                          SLICE           A0_TO_F0_DELAY   0.477        25.957  1       
+TIMER_EN_N_17                                             NET DELAY        2.075        28.032  1       
+i497_4_lut/C->i497_4_lut/Z                SLICE           C0_TO_F0_DELAY   0.477        28.509  2       
+mainTimer/TIMER_EN                                        NET DELAY        2.075        30.584  2       
+mainTimer/EN_I_0_1_lut/A->mainTimer/EN_I_0_1_lut/Z
+                                          SLICE           A0_TO_F0_DELAY   0.477        31.061  19      
+mainTimer/clkCont_17__N_49 ( LSR )                        NET DELAY        2.075        33.136  19      
+
+
+                                                          CONSTRAINT     0.000    100000.000  1       
+OSCInst1/CLKLF                            LFOSC           CLOCK LATENCY  0.000    100000.000  101     
+STATE_OUT/serial/SERCLK_OUT_c ( CLK )                     NET DELAY      4.150    100004.150  101     
+                                                          Uncertainty    0.000    100004.150  
+                                                          Setup time     0.424    100003.726  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+Required Time                                                                     100003.726  
+Arrival Time                                                                         -33.136  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+Path Slack  (Passed)                                                               99970.590  
+
+
+
+
+++++ Path 9 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : keyboard/state_i0/Q  (SLICE)
+Path End         : mainTimer/clkCont_i17/SR  (SLICE)
+Source Clock     : SERCLK_OUT_c (R)
+Destination Clock: SERCLK_OUT_c (R)
+Logic Level      : 11
+Delay Ratio      : 78.7% (route), 21.3% (logic)
+Clock Skew       : 0.000 ns
+Setup Constraint : 100000.000 ns 
+Path Slack       : 99970.590 ns  (Passed)
+
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+OSCInst1/CLKLF                            LFOSC           CLOCK LATENCY  0.000         0.000  101     
+STATE_OUT/serial/SERCLK_OUT_c                             NET DELAY      4.150         4.150  101     
+
+
+
+keyboard/state_i0/CK->keyboard/state_i0/Q
+                                          SLICE           CLK_TO_Q0_DELAY  1.391         5.541  12      
+keyboard/state[0]                                         NET DELAY        2.075         7.616  12      
+keyboard/i2_3_lut_4_lut_adj_41/C->keyboard/i2_3_lut_4_lut_adj_41/Z
+                                          SLICE           C0_TO_F0_DELAY   0.477         8.093  2       
+keyboard/n1765                                            NET DELAY        2.075        10.168  2       
+keyboard/i505_3_lut/C->keyboard/i505_3_lut/Z
+                                          SLICE           C0_TO_F0_DELAY   0.477        10.645  2       
+keyboard/actualKey[3][0]                                  NET DELAY        2.075        12.720  2       
+keyboard/i1664_4_lut/A->keyboard/i1664_4_lut/Z
+                                          SLICE           A0_TO_F0_DELAY   0.477        13.197  1       
+keyboard/n2122                                            NET DELAY        2.075        15.272  1       
+i5_4_lut/C->i5_4_lut/Z                    SLICE           C0_TO_F0_DELAY   0.477        15.749  1       
+n12                                                       NET DELAY        2.075        17.824  1       
+i6_4_lut/B->i6_4_lut/Z                    SLICE           B0_TO_F0_DELAY   0.477        18.301  11      
+KEY_STATUS[1]                                             NET DELAY        2.075        20.376  11      
+KEY_STATUS_1__I_0_i3_3_lut_3_lut/A->KEY_STATUS_1__I_0_i3_3_lut_3_lut/Z
+                                          SLICE           A0_TO_F0_DELAY   0.477        20.853  3       
+TIMER_EN_N_26                                             NET DELAY        2.075        22.928  3       
+i3_4_lut/B->i3_4_lut/Z                    SLICE           B0_TO_F0_DELAY   0.477        23.405  3       
+TIMER_EN_N_22                                             NET DELAY        2.075        25.480  3       
+Sreg_1__I_0_i3_4_lut/A->Sreg_1__I_0_i3_4_lut/Z
+                                          SLICE           A0_TO_F0_DELAY   0.477        25.957  1       
+TIMER_EN_N_17                                             NET DELAY        2.075        28.032  1       
+i497_4_lut/C->i497_4_lut/Z                SLICE           C0_TO_F0_DELAY   0.477        28.509  2       
+mainTimer/TIMER_EN                                        NET DELAY        2.075        30.584  2       
+mainTimer/EN_I_0_1_lut/A->mainTimer/EN_I_0_1_lut/Z
+                                          SLICE           A0_TO_F0_DELAY   0.477        31.061  19      
+mainTimer/clkCont_17__N_49 ( LSR )                        NET DELAY        2.075        33.136  19      
+
+
+                                                          CONSTRAINT     0.000    100000.000  1       
+OSCInst1/CLKLF                            LFOSC           CLOCK LATENCY  0.000    100000.000  101     
+STATE_OUT/serial/SERCLK_OUT_c ( CLK )                     NET DELAY      4.150    100004.150  101     
+                                                          Uncertainty    0.000    100004.150  
+                                                          Setup time     0.424    100003.726  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+Required Time                                                                     100003.726  
+Arrival Time                                                                         -33.136  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+Path Slack  (Passed)                                                               99970.590  
+
+
+
+
+++++ Path 10 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : keyboard/state_i0/Q  (SLICE)
+Path End         : mainTimer/state/SR  (SLICE)
+Source Clock     : SERCLK_OUT_c (R)
+Destination Clock: SERCLK_OUT_c (R)
+Logic Level      : 11
+Delay Ratio      : 78.7% (route), 21.3% (logic)
+Clock Skew       : 0.000 ns
+Setup Constraint : 100000.000 ns 
+Path Slack       : 99970.590 ns  (Passed)
+
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+OSCInst1/CLKLF                            LFOSC           CLOCK LATENCY  0.000         0.000  101     
+STATE_OUT/serial/SERCLK_OUT_c                             NET DELAY      4.150         4.150  101     
+
+
+
+keyboard/state_i0/CK->keyboard/state_i0/Q
+                                          SLICE           CLK_TO_Q0_DELAY  1.391         5.541  12      
+keyboard/state[0]                                         NET DELAY        2.075         7.616  12      
+keyboard/i2_3_lut_4_lut_adj_41/C->keyboard/i2_3_lut_4_lut_adj_41/Z
+                                          SLICE           C0_TO_F0_DELAY   0.477         8.093  2       
+keyboard/n1765                                            NET DELAY        2.075        10.168  2       
+keyboard/i505_3_lut/C->keyboard/i505_3_lut/Z
+                                          SLICE           C0_TO_F0_DELAY   0.477        10.645  2       
+keyboard/actualKey[3][0]                                  NET DELAY        2.075        12.720  2       
+keyboard/i1664_4_lut/A->keyboard/i1664_4_lut/Z
+                                          SLICE           A0_TO_F0_DELAY   0.477        13.197  1       
+keyboard/n2122                                            NET DELAY        2.075        15.272  1       
+i5_4_lut/C->i5_4_lut/Z                    SLICE           C0_TO_F0_DELAY   0.477        15.749  1       
+n12                                                       NET DELAY        2.075        17.824  1       
+i6_4_lut/B->i6_4_lut/Z                    SLICE           B0_TO_F0_DELAY   0.477        18.301  11      
+KEY_STATUS[1]                                             NET DELAY        2.075        20.376  11      
+KEY_STATUS_1__I_0_i3_3_lut_3_lut/A->KEY_STATUS_1__I_0_i3_3_lut_3_lut/Z
+                                          SLICE           A0_TO_F0_DELAY   0.477        20.853  3       
+TIMER_EN_N_26                                             NET DELAY        2.075        22.928  3       
+i3_4_lut/B->i3_4_lut/Z                    SLICE           B0_TO_F0_DELAY   0.477        23.405  3       
+TIMER_EN_N_22                                             NET DELAY        2.075        25.480  3       
+Sreg_1__I_0_i3_4_lut/A->Sreg_1__I_0_i3_4_lut/Z
+                                          SLICE           A0_TO_F0_DELAY   0.477        25.957  1       
+TIMER_EN_N_17                                             NET DELAY        2.075        28.032  1       
+i497_4_lut/C->i497_4_lut/Z                SLICE           C0_TO_F0_DELAY   0.477        28.509  2       
+mainTimer/TIMER_EN                                        NET DELAY        2.075        30.584  2       
+mainTimer/EN_I_0_1_lut/A->mainTimer/EN_I_0_1_lut/Z
+                                          SLICE           A0_TO_F0_DELAY   0.477        31.061  19      
+mainTimer/clkCont_17__N_49 ( LSR )                        NET DELAY        2.075        33.136  19      
+
+
+                                                          CONSTRAINT     0.000    100000.000  1       
+OSCInst1/CLKLF                            LFOSC           CLOCK LATENCY  0.000    100000.000  101     
+STATE_OUT/serial/SERCLK_OUT_c ( CLK )                     NET DELAY      4.150    100004.150  101     
+                                                          Uncertainty    0.000    100004.150  
+                                                          Setup time     0.424    100003.726  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+Required Time                                                                     100003.726  
+Arrival Time                                                                         -33.136  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+Path Slack  (Passed)                                                               99970.590  
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+                    End of Detailed Report for timing paths 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+##########################################################
+
+4.2  Hold Detailed Report
+==========================
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Detail report of critical paths
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+                    Detailed Report for timing paths 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : STATE_OUT/init_c/Q  (SLICE)
+Path End         : STATE_OUT/serial/status_send/DO0  (IOLOGIC)
+Source Clock     : SERCLK_OUT_c (R)
+Destination Clock: SERCLK_OUT_c (R)
+Logic Level      : 1
+Delay Ratio      : 73.0% (route), 27.0% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 2.843 ns  (Passed)
+
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+OSCInst1/CLKLF                            LFOSC           CLOCK LATENCY  0.000         0.000  102     
+STATE_OUT/serial/SERCLK_OUT_c                             NET DELAY      4.150         4.150  102     
+
+
+
+STATE_OUT/init_c/CK->STATE_OUT/init_c/Q   SLICE           CLK_TO_Q0_DELAY  0.768         4.918  6       
+STATE_OUT/serial/init ( DO0 )                             NET DELAY        2.075         6.993  6       
+
+
+                                                          CONSTRAINT     0.000         0.000  1       
+OSCInst1/CLKLF                            LFOSC           CLOCK LATENCY  0.000         0.000  102     
+STATE_OUT/serial/SERCLK_OUT_c ( OUTCLK )                  NET DELAY      4.150         4.150  102     
+                                                          Uncertainty    0.000         4.150  
+                                                          Hold time      0.000         4.150  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+Required Time                                                                         -4.150  
+Arrival Time                                                                           6.993  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+Path Slack  (Passed)                                                                   2.843  
+
+
+
+
+++++ Path 2 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : mainTimer/state/Q  (SLICE)
+Path End         : mainTimer/clkCont_i15/D  (SLICE)
+Source Clock     : SERCLK_OUT_c (R)
+Destination Clock: SERCLK_OUT_c (R)
+Logic Level      : 2
+Delay Ratio      : 67.1% (route), 32.9% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 3.092 ns  (Passed)
+
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+OSCInst1/CLKLF                            LFOSC           CLOCK LATENCY  0.000         0.000  102     
+STATE_OUT/serial/SERCLK_OUT_c                             NET DELAY      4.150         4.150  102     
+
+
+
+mainTimer/state/CK->mainTimer/state/Q     SLICE           CLK_TO_Q0_DELAY  0.768         4.918  25      
+mainTimer/TIME_OUT                                        NET DELAY        2.075         6.993  25      
+mainTimer/i858_2_lut/B->mainTimer/i858_2_lut/Z
+                                          SLICE           B0_TO_F0_DELAY   0.249         7.242  1       
+mainTimer/clkCont_17__N_31[15] ( DI0 )                    NET DELAY        0.000         7.242  1       
+
+
+                                                          CONSTRAINT     0.000         0.000  1       
+OSCInst1/CLKLF                            LFOSC           CLOCK LATENCY  0.000         0.000  102     
+STATE_OUT/serial/SERCLK_OUT_c ( CLK )                     NET DELAY      4.150         4.150  102     
+                                                          Uncertainty    0.000         4.150  
+                                                          Hold time      0.000         4.150  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+Required Time                                                                         -4.150  
+Arrival Time                                                                           7.242  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+Path Slack  (Passed)                                                                   3.092  
+
+
+
+
+++++ Path 3 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : mainTimer/state/Q  (SLICE)
+Path End         : mainTimer/clkCont_i16/D  (SLICE)
+Source Clock     : SERCLK_OUT_c (R)
+Destination Clock: SERCLK_OUT_c (R)
+Logic Level      : 2
+Delay Ratio      : 67.1% (route), 32.9% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 3.092 ns  (Passed)
+
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+OSCInst1/CLKLF                            LFOSC           CLOCK LATENCY  0.000         0.000  102     
+STATE_OUT/serial/SERCLK_OUT_c                             NET DELAY      4.150         4.150  102     
+
+
+
+mainTimer/state/CK->mainTimer/state/Q     SLICE           CLK_TO_Q0_DELAY  0.768         4.918  25      
+mainTimer/TIME_OUT                                        NET DELAY        2.075         6.993  25      
+mainTimer/i857_2_lut/B->mainTimer/i857_2_lut/Z
+                                          SLICE           B0_TO_F0_DELAY   0.249         7.242  1       
+mainTimer/clkCont_17__N_31[16] ( DI0 )                    NET DELAY        0.000         7.242  1       
+
+
+                                                          CONSTRAINT     0.000         0.000  1       
+OSCInst1/CLKLF                            LFOSC           CLOCK LATENCY  0.000         0.000  102     
+STATE_OUT/serial/SERCLK_OUT_c ( CLK )                     NET DELAY      4.150         4.150  102     
+                                                          Uncertainty    0.000         4.150  
+                                                          Hold time      0.000         4.150  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+Required Time                                                                         -4.150  
+Arrival Time                                                                           7.242  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+Path Slack  (Passed)                                                                   3.092  
+
+
+
+
+++++ Path 4 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : mainTimer/state/Q  (SLICE)
+Path End         : mainTimer/clkCont_i17/D  (SLICE)
+Source Clock     : SERCLK_OUT_c (R)
+Destination Clock: SERCLK_OUT_c (R)
+Logic Level      : 2
+Delay Ratio      : 67.1% (route), 32.9% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 3.092 ns  (Passed)
+
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+OSCInst1/CLKLF                            LFOSC           CLOCK LATENCY  0.000         0.000  102     
+STATE_OUT/serial/SERCLK_OUT_c                             NET DELAY      4.150         4.150  102     
+
+
+
+mainTimer/state/CK->mainTimer/state/Q     SLICE           CLK_TO_Q0_DELAY  0.768         4.918  25      
+mainTimer/TIME_OUT                                        NET DELAY        2.075         6.993  25      
+mainTimer/i855_2_lut/B->mainTimer/i855_2_lut/Z
+                                          SLICE           B0_TO_F0_DELAY   0.249         7.242  1       
+mainTimer/clkCont_17__N_31[17] ( DI0 )                    NET DELAY        0.000         7.242  1       
+
+
+                                                          CONSTRAINT     0.000         0.000  1       
+OSCInst1/CLKLF                            LFOSC           CLOCK LATENCY  0.000         0.000  102     
+STATE_OUT/serial/SERCLK_OUT_c ( CLK )                     NET DELAY      4.150         4.150  102     
+                                                          Uncertainty    0.000         4.150  
+                                                          Hold time      0.000         4.150  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+Required Time                                                                         -4.150  
+Arrival Time                                                                           7.242  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+Path Slack  (Passed)                                                                   3.092  
+
+
+
+
+++++ Path 5 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : mainTimer/clkCont_i5/Q  (SLICE)
+Path End         : mainTimer/state/D  (SLICE)
+Source Clock     : SERCLK_OUT_c (R)
+Destination Clock: SERCLK_OUT_c (R)
+Logic Level      : 2
+Delay Ratio      : 67.1% (route), 32.9% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 3.092 ns  (Passed)
+
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+OSCInst1/CLKLF                            LFOSC           CLOCK LATENCY  0.000         0.000  102     
+STATE_OUT/serial/SERCLK_OUT_c                             NET DELAY      4.150         4.150  102     
+
+
+
+mainTimer/clkCont_i5/CK->mainTimer/clkCont_i5/Q
+                                          SLICE           CLK_TO_Q0_DELAY  0.768         4.918  2       
+mainTimer/clkCont[5]                                      NET DELAY        2.075         6.993  2       
+mainTimer/i12_4_lut/A->mainTimer/i12_4_lut/Z
+                                          SLICE           A0_TO_F0_DELAY   0.249         7.242  1       
+mainTimer/n2882 ( DI0 )                                   NET DELAY        0.000         7.242  1       
+
+
+                                                          CONSTRAINT     0.000         0.000  1       
+OSCInst1/CLKLF                            LFOSC           CLOCK LATENCY  0.000         0.000  102     
+STATE_OUT/serial/SERCLK_OUT_c ( CLK )                     NET DELAY      4.150         4.150  102     
+                                                          Uncertainty    0.000         4.150  
+                                                          Hold time      0.000         4.150  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+Required Time                                                                         -4.150  
+Arrival Time                                                                           7.242  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+Path Slack  (Passed)                                                                   3.092  
+
+
+
+
+++++ Path 6 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : keyboard/state_i0/Q  (SLICE)
+Path End         : keyboard/state_i1/D  (SLICE)
+Source Clock     : SERCLK_OUT_c (R)
+Destination Clock: SERCLK_OUT_c (R)
+Logic Level      : 2
+Delay Ratio      : 67.1% (route), 32.9% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 3.092 ns  (Passed)
+
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+OSCInst1/CLKLF                            LFOSC           CLOCK LATENCY  0.000         0.000  102     
+STATE_OUT/serial/SERCLK_OUT_c                             NET DELAY      4.150         4.150  102     
+
+
+
+keyboard/state_i0/CK->keyboard/state_i0/Q
+                                          SLICE           CLK_TO_Q0_DELAY  0.768         4.918  12      
+keyboard/state[0]                                         NET DELAY        2.075         6.993  12      
+keyboard.SLICE_46/A0->keyboard.SLICE_46/F0
+                                          SLICE           A0_TO_F0_DELAY   0.249         7.242  1       
+keyboard.nextState[1]$n2 ( DI0 )                          NET DELAY        0.000         7.242  1       
+
+
+                                                          CONSTRAINT     0.000         0.000  1       
+OSCInst1/CLKLF                            LFOSC           CLOCK LATENCY  0.000         0.000  102     
+STATE_OUT/serial/SERCLK_OUT_c ( CLK )                     NET DELAY      4.150         4.150  102     
+                                                          Uncertainty    0.000         4.150  
+                                                          Hold time      0.000         4.150  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+Required Time                                                                         -4.150  
+Arrival Time                                                                           7.242  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+Path Slack  (Passed)                                                                   3.092  
+
+
+
+
+++++ Path 7 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : STATE_OUT/serial/j__i0/Q  (SLICE)
+Path End         : STATE_OUT/serial/j__i0/D  (SLICE)
+Source Clock     : SERCLK_OUT_c (R)
+Destination Clock: SERCLK_OUT_c (R)
+Logic Level      : 2
+Delay Ratio      : 67.1% (route), 32.9% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 3.092 ns  (Passed)
+
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+OSCInst1/CLKLF                            LFOSC           CLOCK LATENCY  0.000         0.000  102     
+STATE_OUT/serial/SERCLK_OUT_c ( CLK )                     NET DELAY      4.150         4.150  102     
+
+
+
+STATE_OUT/serial/j__i0/CK->STATE_OUT/serial/j__i0/Q
+                                          SLICE           CLK_TO_Q1_DELAY  0.768         4.918  2       
+STATE_OUT/serial/j[0]                                     NET DELAY        2.075         6.993  2       
+STATE_OUT/serial/add_6_add_5_1/B1->STATE_OUT/serial/add_6_add_5_1/S1
+                                          SLICE           B1_TO_F1_DELAY   0.249         7.242  1       
+STATE_OUT/serial/n167[0] ( DI1 )                          NET DELAY        0.000         7.242  1       
+
+
+                                                          CONSTRAINT     0.000         0.000  1       
+OSCInst1/CLKLF                            LFOSC           CLOCK LATENCY  0.000         0.000  102     
+STATE_OUT/serial/SERCLK_OUT_c ( CLK )                     NET DELAY      4.150         4.150  102     
+                                                          Uncertainty    0.000         4.150  
+                                                          Hold time      0.000         4.150  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+Required Time                                                                         -4.150  
+Arrival Time                                                                           7.242  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+Path Slack  (Passed)                                                                   3.092  
+
+
+
+
+++++ Path 8 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : STATE_OUT/serial/j__i1/Q  (SLICE)
+Path End         : STATE_OUT/serial/j__i1/D  (SLICE)
+Source Clock     : SERCLK_OUT_c (R)
+Destination Clock: SERCLK_OUT_c (R)
+Logic Level      : 2
+Delay Ratio      : 67.1% (route), 32.9% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 3.092 ns  (Passed)
+
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+OSCInst1/CLKLF                            LFOSC           CLOCK LATENCY  0.000         0.000  102     
+STATE_OUT/serial/SERCLK_OUT_c ( CLK )                     NET DELAY      4.150         4.150  102     
+
+
+
+STATE_OUT/serial/j__i1/CK->STATE_OUT/serial/j__i1/Q
+                                          SLICE           CLK_TO_Q0_DELAY  0.768         4.918  3       
+STATE_OUT/serial/j[1]                                     NET DELAY        2.075         6.993  3       
+STATE_OUT/serial/add_6_add_5_3/B0->STATE_OUT/serial/add_6_add_5_3/S0
+                                          SLICE           B0_TO_F0_DELAY   0.249         7.242  1       
+STATE_OUT/serial/n167[1] ( DI0 )                          NET DELAY        0.000         7.242  1       
+
+
+                                                          CONSTRAINT     0.000         0.000  1       
+OSCInst1/CLKLF                            LFOSC           CLOCK LATENCY  0.000         0.000  102     
+STATE_OUT/serial/SERCLK_OUT_c ( CLK )                     NET DELAY      4.150         4.150  102     
+                                                          Uncertainty    0.000         4.150  
+                                                          Hold time      0.000         4.150  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+Required Time                                                                         -4.150  
+Arrival Time                                                                           7.242  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+Path Slack  (Passed)                                                                   3.092  
+
+
+
+
+++++ Path 9 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : STATE_OUT/j__i0/Q  (SLICE)
+Path End         : STATE_OUT/j__i0/D  (SLICE)
+Source Clock     : SERCLK_OUT_c (R)
+Destination Clock: SERCLK_OUT_c (R)
+Logic Level      : 2
+Delay Ratio      : 67.1% (route), 32.9% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 3.092 ns  (Passed)
+
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+OSCInst1/CLKLF                            LFOSC           CLOCK LATENCY  0.000         0.000  102     
+STATE_OUT/serial/SERCLK_OUT_c ( CLK )                     NET DELAY      4.150         4.150  102     
+
+
+
+STATE_OUT/j__i0/CK->STATE_OUT/j__i0/Q     SLICE           CLK_TO_Q1_DELAY  0.768         4.918  1       
+STATE_OUT/j[0]_2                                          NET DELAY        2.075         6.993  1       
+STATE_OUT/add_7_add_5_1/B1->STATE_OUT/add_7_add_5_1/S1
+                                          SLICE           B1_TO_F1_DELAY   0.249         7.242  1       
+STATE_OUT/waiting_N_152[0] ( DI1 )                        NET DELAY        0.000         7.242  1       
+
+
+                                                          CONSTRAINT     0.000         0.000  1       
+OSCInst1/CLKLF                            LFOSC           CLOCK LATENCY  0.000         0.000  102     
+STATE_OUT/serial/SERCLK_OUT_c ( CLK )                     NET DELAY      4.150         4.150  102     
+                                                          Uncertainty    0.000         4.150  
+                                                          Hold time      0.000         4.150  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+Required Time                                                                         -4.150  
+Arrival Time                                                                           7.242  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+Path Slack  (Passed)                                                                   3.092  
+
+
+
+
+++++ Path 10 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : STATE_OUT/j__i1/Q  (SLICE)
+Path End         : STATE_OUT/j__i1/D  (SLICE)
+Source Clock     : SERCLK_OUT_c (R)
+Destination Clock: SERCLK_OUT_c (R)
+Logic Level      : 2
+Delay Ratio      : 67.1% (route), 32.9% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 3.092 ns  (Passed)
+
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+OSCInst1/CLKLF                            LFOSC           CLOCK LATENCY  0.000         0.000  102     
+STATE_OUT/serial/SERCLK_OUT_c ( CLK )                     NET DELAY      4.150         4.150  102     
+
+
+
+STATE_OUT/j__i1/CK->STATE_OUT/j__i1/Q     SLICE           CLK_TO_Q0_DELAY  0.768         4.918  1       
+STATE_OUT/j[1]_2                                          NET DELAY        2.075         6.993  1       
+STATE_OUT/add_7_add_5_3/B0->STATE_OUT/add_7_add_5_3/S0
+                                          SLICE           B0_TO_F0_DELAY   0.249         7.242  1       
+STATE_OUT/waiting_N_152[1] ( DI0 )                        NET DELAY        0.000         7.242  1       
+
+
+                                                          CONSTRAINT     0.000         0.000  1       
+OSCInst1/CLKLF                            LFOSC           CLOCK LATENCY  0.000         0.000  102     
+STATE_OUT/serial/SERCLK_OUT_c ( CLK )                     NET DELAY      4.150         4.150  102     
+                                                          Uncertainty    0.000         4.150  
+                                                          Hold time      0.000         4.150  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+Required Time                                                                         -4.150  
+Arrival Time                                                                           7.242  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+Path Slack  (Passed)                                                                   3.092  
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+                    End of Detailed Report for timing paths 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+##########################################################
+

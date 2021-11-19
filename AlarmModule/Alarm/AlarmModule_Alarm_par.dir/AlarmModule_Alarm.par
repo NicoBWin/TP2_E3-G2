@@ -1,0 +1,17 @@
+Copyright 2015 Lattice Semiconductor Corporation, All Rights Reserved
+Thu Nov 18 23:40:46 2021
+
+Command Line: par -w -n 1 -t 1 -s 1 -cores 1 -exp parPathBased=ON \
+	AlarmModule_Alarm_map.udb AlarmModule_Alarm.udb 
+
+
+Level/       Number       Worst        Timing       Worst        Timing       Run          Run
+Cost [udb]   Unrouted     Slack        Score        Slack(hold)  Score(hold)  Time         Status
+----------   --------     -----        ------       -----------  -----------  ----         ------
+5_1   *      0            99971.616    0            1.719        0            16           Completed
+
+* : Design saved.
+
+Total (real) run time for 1-seed: 17 secs 
+
+par done!

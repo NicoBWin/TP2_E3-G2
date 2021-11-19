@@ -1,0 +1,130 @@
+<HTML>
+<HEAD>
+<TITLE>Lattice TCL Log</TITLE>
+<link href="file:///C:/lscc/radiant/3.0/data/theme/css/light/report.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="file:///C:/lscc/radiant/3.0/data/theme/css/print/report.css" rel="stylesheet" type="text/css" media="print"/>
+<style type="text/css">
+#toc {
+  position: fixed;
+  right: 2px;
+  top: 2px;
+  padding: 2px 5px 2px 5px;
+  background-color:rgba(210,210,210,0.1);
+  border-style: solid;
+  border-color: rgba(192,192,192,0.8);
+  border-width:1px;
+}
+#toc_list {
+  display: none;
+  }
+</style>
+
+<script type="text/javascript">
+<!--
+function showTocList() {
+var a = document.getElementById("toc_list");
+a.style.display = "block";
+}
+
+function hideTocList() {
+var a = document.getElementById("toc_list");
+if (a)
+    a.style.display = "none";
+}
+
+//-->
+</script>
+
+</HEAD>
+
+<BODY>
+
+<DIV id="content" onclick="hideTocList()"><PRE>
+<A name="pn211118233249"></A><B><U><big>pn211118233249</big></U></B>
+#Start recording tcl command: 11/18/2021 23:25:19
+#Project Location: D:/Users/nicob/Desktop/TP2_E3-G2/AlarmModule; Project name: AlarmModule
+prj_create -name "AlarmModule" -impl "Alarm" -dev iCE40UP5K-SG48I -performance "High-Performance_1.2V" -synthesis "lse"
+prj_add_source "D:/Users/nicob/Desktop/TP2_E3-G2/AlarmModule/source/Alarm/Alarm.sdc" "D:/Users/nicob/Desktop/TP2_E3-G2/AlarmModule/source/Alarm/Alarm.pdc"
+prj_save 
+prj_add_source "D:/Users/nicob/Desktop/TP2_E3-G2/AlarmModule/source/Alarm/codeCheck.v" "D:/Users/nicob/Desktop/TP2_E3-G2/AlarmModule/source/Alarm/easySerialOut.v" "D:/Users/nicob/Desktop/TP2_E3-G2/AlarmModule/source/Alarm/MainModule.v" "D:/Users/nicob/Desktop/TP2_E3-G2/AlarmModule/source/Alarm/serialIn.v" "D:/Users/nicob/Desktop/TP2_E3-G2/AlarmModule/source/Alarm/serialOut.v" "D:/Users/nicob/Desktop/TP2_E3-G2/AlarmModule/source/Alarm/timer.v"
+prj_remove_source "D:/Users/nicob/Desktop/TP2_E3-G2/AlarmModule/source/Alarm/serialIn.v"
+prj_run Synthesis -impl Alarm
+prj_run Export -impl Alarm
+launch_programmer_prj "C:/lscc/radiant/3.0"
+#Stop recording: 11/18/2021 23:32:49
+
+
+
+<A name="pn211118234647"></A><B><U><big>pn211118234647</big></U></B>
+#Start recording tcl command: 11/18/2021 23:40:19
+#Project Location: D:/Users/nicob/Desktop/TP2_E3-G2/AlarmModule; Project name: AlarmModule
+prj_open "D:/Users/nicob/Desktop/TP2_E3-G2/AlarmModule/AlarmModule.rdf"
+prj_run Export -impl Alarm
+launch_programmer_prj "C:/lscc/radiant/3.0"
+prj_run Export -impl Alarm
+#Stop recording: 11/18/2021 23:46:47
+
+
+
+</PRE></DIV>
+
+<DIV id="toc" class="radiant"><span onmousemove="showTocList()">Contents</span>
+<UL id="toc_list">
+<LI><A href=#pn211118233249>pn211118233249</A></LI>
+<LI><A href=#pn211118234647>pn211118234647</A></LI>
+</UL>
+</DIV>
+
+<button id="back_to_top" class="radiant" onclick="scrollToTop()">&lt;</button>
+<script type="text/javascript">
+<!--
+var scrollStep = 0;
+function scrollToTop(){
+  var funScroll = function() {
+    var top = document.body.scrollTop;
+    if (top == 0) {
+      scrollStep = 0;
+      return;
+    }
+    if (scrollStep == 0)
+      scrollStep = top/20 + 1;
+    top -= scrollStep;
+    if (top < 0)
+      top = 0;
+    document.body.scrollTop = top;
+    requestAnimationFrame(funScroll);
+  };
+  funScroll();
+}
+
+window.addEventListener('scroll', function(e) {
+  var backToTop = document.getElementById('back_to_top')
+  if (document.body.scrollTop > 0) {
+    backToTop.style.display = 'block';
+  } else {	backToTop.style.display = 'none'  }});
+
+//-->
+</script>
+
+<style type="text/css">
+#back_to_top {
+  bottom:20px; right:20px;
+  width:30px; height:30px;
+  font-size: 20px;
+  padding: 2px 5px 2px 5px;
+  position:fixed;
+  background-color:rgba(210,210,210,0.1);
+  border-style: solid;
+  border-color: rgba(192,192,192,0.8);
+  border-width:1px;
+  display:none;
+  -webkit-transform: rotate(90deg);
+  -webkit-transform-origin:50% 50%;
+}
+#back_to_top:focus {
+  outline-width:0px;
+}
+</style>
+
+</BODY>
+

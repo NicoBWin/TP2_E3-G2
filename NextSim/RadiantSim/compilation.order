@@ -1,0 +1,6 @@
+.\src\MainTestBench.v
+.\src\MainModule.v
+.\src\codeCheck.v
+.\src\easySerialOut.v
+.\src\serialOut.v
+.\src\timer.v

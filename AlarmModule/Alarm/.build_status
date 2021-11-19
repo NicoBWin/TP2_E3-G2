@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BuildStatus>
+    <Strategy name="Strategy1">
+        <Milestone name="Export" build_result="2" build_time="1637289666">
+            <Task name="Bitgen" build_result="2" update_result="0" update_time="1637289666"/>
+            <Task name="IBIS" build_result="2" update_result="0" update_time="1637289667"/>
+            <Task name="TimingSimFileVlg" build_result="2" update_result="0" update_time="1637289669"/>
+        </Milestone>
+        <Milestone name="Map" build_result="2" build_time="1637289644">
+            <Task name="Map" build_result="2" update_result="0" update_time="1637289644"/>
+            <Task name="MapTrace" build_result="2" update_result="0" update_time="1637289646"/>
+        </Milestone>
+        <Milestone name="PAR" build_result="2" build_time="1637289663">
+            <Task name="PAR" build_result="2" update_result="0" update_time="1637289663"/>
+            <Task name="PARTrace" build_result="2" update_result="0" update_time="1637289665"/>
+            <Task name="IOTiming" build_result="0" update_result="3" update_time="0"/>
+        </Milestone>
+        <Milestone name="Synthesis" build_result="2" build_time="1637289642">
+            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1637289642"/>
+            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1637289669"/>
+            <Task name="SynTrace" build_result="2" update_result="0" update_time="1637289643"/>
+            <Task name="SynVerilogSimFile" build_result="0" update_result="3" update_time="0"/>
+        </Milestone>
+        <Report name="AlarmModule_Alarm.bgn" last_build_time="1637289666" last_build_size="996"/>
+        <Report name="AlarmModule_Alarm.bin" last_build_time="1637289666" last_build_size="104156"/>
+        <Report name="AlarmModule_Alarm.lsedata" last_build_time="0" last_build_size="0"/>
+        <Report name="AlarmModule_Alarm.tw1.html" last_build_time="1637289646" last_build_size="200912"/>
+        <Report name="AlarmModule_Alarm.twr.html" last_build_time="1637289664" last_build_size="411355"/>
+        <Report name="AlarmModule_Alarm.tws.html" last_build_time="1637289643" last_build_size="400002"/>
+        <Report name="AlarmModule_Alarm.udb" last_build_time="1637289663" last_build_size="39790"/>
+        <Report name="AlarmModule_Alarm_map.udb" last_build_time="1637289644" last_build_size="24845"/>
+        <Report name="AlarmModule_Alarm_rtl.udb" last_build_time="1637289641" last_build_size="13947"/>
+        <Report name="AlarmModule_Alarm_syn.udb" last_build_time="1637289642" last_build_size="18216"/>
+        <Report name="AlarmModule_Alarm_vo.sdf" last_build_time="1637289668" last_build_size="179098"/>
+        <Report name="AlarmModule_Alarm_vo.vo" last_build_time="1637289668" last_build_size="176261"/>
+        <Report name="IBIS/AlarmModule_Alarm.ibs" last_build_time="1637289667" last_build_size="54305"/>
+    </Strategy>
+</BuildStatus>

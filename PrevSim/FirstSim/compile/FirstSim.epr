@@ -1,0 +1,7 @@
+"../src/CodeChecker.v"	1
+"../src/MainTestBench.v"	1
+"../src/serialIn.v"	1
+"../src/easySerialOut.v"	1
+"../src/MainModule.v"	1
+"../src/serialOut.v"	1
+"../src/timer.v"	1

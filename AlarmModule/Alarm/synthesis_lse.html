@@ -1,0 +1,400 @@
+<HTML>
+<HEAD>
+<TITLE>Synthesis Report</TITLE>
+<link href="file:///C:/lscc/radiant/3.0/data/theme/css/light/report.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="file:///C:/lscc/radiant/3.0/data/theme/css/print/report.css" rel="stylesheet" type="text/css" media="print"/>
+<style type="text/css">
+#toc {
+  position: fixed;
+  right: 2px;
+  top: 2px;
+  padding: 2px 5px 2px 5px;
+  background-color:rgba(210,210,210,0.1);
+  border-style: solid;
+  border-color: rgba(192,192,192,0.8);
+  border-width:1px;
+}
+#toc_list {
+  display: none;
+  }
+</style>
+
+<script type="text/javascript">
+<!--
+function showTocList() {
+var a = document.getElementById("toc_list");
+a.style.display = "block";
+}
+
+function hideTocList() {
+var a = document.getElementById("toc_list");
+if (a)
+    a.style.display = "none";
+}
+
+//-->
+</script>
+
+</HEAD>
+
+<BODY>
+
+<DIV id="content" onclick="hideTocList()"><PRE>
+<A name="Syn"></A><B><U><big>Synthesis Report</big></U></B>
+synthesis:  version Radiant Software (64-bit) 3.0.0.24.1
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2021 Lattice Semiconductor Corporation,  All rights reserved.
+Thu Nov 18 23:40:39 2021
+
+
+Command Line:  C:\lscc\radiant\3.0\ispfpga\bin\nt64\synthesis.exe -f AlarmModule_Alarm_lattice.synproj -gui -msgset D:/Users/nicob/Desktop/TP2_E3-G2/AlarmModule/promote.xml 
+
+Synthesis options:
+The -a option is iCE40UP.
+The -t option is SG48.
+The -sp option is High-Performance_1.2V.
+The -p option is iCE40UP5K.
+                                                          
+
+
+##########################################################
+
+
+### Lattice Family     : iCE40UP
+
+
+### Device             : iCE40UP5K
+
+
+### Package            : SG48
+
+
+### Performance Grade  : High-Performance_1.2V
+
+
+                                                         
+
+
+INFO - synthesis: User-Selected Strategy Settings
+Optimization goal = Area
+Top-level module name = MainModule.
+Target frequency = 200.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 3
+RWCheckOnRam = 0
+
+BRAM utilization = 100.000000 %
+DSP usage = true
+DSP utilization = 100.000000 %
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+
+Mux style = auto (Default)
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+Output HDL file name = AlarmModule_Alarm.vm.
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-sdc option: SDC file input is D:/Users/nicob/Desktop/TP2_E3-G2/AlarmModule/source/Alarm/Alarm.sdc.
+-path C:/lscc/radiant/3.0/ispfpga/ice40tp/data (searchpath added)
+-path D:/Users/nicob/Desktop/TP2_E3-G2/AlarmModule (searchpath added)
+-path D:/Users/nicob/Desktop/TP2_E3-G2/AlarmModule/Alarm (searchpath added)
+Mixed language design
+Verilog design file = C:/lscc/radiant/3.0/ip/pmi/pmi_iCE40UP.v
+Verilog design file = D:/Users/nicob/Desktop/TP2_E3-G2/AlarmModule/source/Alarm/MainModule.v
+Verilog design file = D:/Users/nicob/Desktop/TP2_E3-G2/AlarmModule/source/Alarm/easySerialOut.v
+Verilog design file = D:/Users/nicob/Desktop/TP2_E3-G2/AlarmModule/source/Alarm/serialOut.v
+Verilog design file = D:/Users/nicob/Desktop/TP2_E3-G2/AlarmModule/source/Alarm/codeCheck.v
+Verilog design file = D:/Users/nicob/Desktop/TP2_E3-G2/AlarmModule/source/Alarm/timer.v
+VHDL library = pmi
+VHDL design file = C:/lscc/radiant/3.0/ip/pmi/pmi_iCE40UP.vhd
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Compile design.
+Compile Design Begin
+Analyzing Verilog file c:/lscc/radiant/3.0/ip/pmi/pmi_ice40up.v. VERI-1482
+INFO - synthesis: c:/lscc/radiant/3.0/ip/pmi/pmi_ice40up.v(1): analyzing included file c:/lscc/radiant/3.0/ip/pmi/pmi_addsub.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.0/ip/pmi/pmi_addsub.v(40): analyzing included file c:/lscc/radiant/3.0/ip/pmi/../common/adder_subtractor/rtl/lscc_add_sub.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.0/ip/pmi/pmi_ice40up.v(2): analyzing included file c:/lscc/radiant/3.0/ip/pmi/pmi_add.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.0/ip/pmi/pmi_add.v(50): analyzing included file c:/lscc/radiant/3.0/ip/pmi/../common/adder/rtl/lscc_adder.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.0/ip/pmi/pmi_ice40up.v(3): analyzing included file c:/lscc/radiant/3.0/ip/pmi/pmi_complex_mult.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.0/ip/pmi/pmi_complex_mult.v(52): analyzing included file c:/lscc/radiant/3.0/ip/pmi/../common/complex_mult/rtl/lscc_complex_mult.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.0/ip/pmi/pmi_ice40up.v(4): analyzing included file c:/lscc/radiant/3.0/ip/pmi/pmi_counter.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.0/ip/pmi/pmi_counter.v(39): analyzing included file c:/lscc/radiant/3.0/ip/pmi/../common/counter/rtl/lscc_cntr.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.0/ip/pmi/pmi_ice40up.v(5): analyzing included file c:/lscc/radiant/3.0/ip/pmi/pmi_fifo.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.0/ip/pmi/pmi_fifo.v(44): analyzing included file c:/lscc/radiant/3.0/ip/pmi/../common/fifo/rtl/lscc_fifo.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.0/ip/pmi/pmi_ice40up.v(6): analyzing included file c:/lscc/radiant/3.0/ip/pmi/pmi_fifo_dc.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.0/ip/pmi/pmi_fifo_dc.v(47): analyzing included file c:/lscc/radiant/3.0/ip/pmi/../common/fifo_dc/rtl/lscc_fifo_dc.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.0/ip/pmi/pmi_ice40up.v(7): analyzing included file c:/lscc/radiant/3.0/ip/pmi/pmi_mac.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.0/ip/pmi/pmi_mac.v(52): analyzing included file c:/lscc/radiant/3.0/ip/pmi/../common/mult_accumulate/rtl/lscc_mult_accumulate.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.0/ip/pmi/pmi_ice40up.v(8): analyzing included file c:/lscc/radiant/3.0/ip/pmi/pmi_multaddsubsum.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.0/ip/pmi/pmi_multaddsubsum.v(53): analyzing included file c:/lscc/radiant/3.0/ip/pmi/../common/mult_add_sub_sum/rtl/lscc_mult_add_sub_sum.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.0/ip/pmi/pmi_ice40up.v(9): analyzing included file c:/lscc/radiant/3.0/ip/pmi/pmi_multaddsub.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.0/ip/pmi/pmi_multaddsub.v(52): analyzing included file c:/lscc/radiant/3.0/ip/pmi/../common/mult_add_sub/rtl/lscc_mult_add_sub.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.0/ip/pmi/pmi_ice40up.v(10): analyzing included file c:/lscc/radiant/3.0/ip/pmi/pmi_mult.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.0/ip/pmi/pmi_mult.v(51): analyzing included file c:/lscc/radiant/3.0/ip/pmi/../common/multiplier/rtl/lscc_multiplier.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.0/ip/pmi/pmi_ice40up.v(11): analyzing included file c:/lscc/radiant/3.0/ip/pmi/pmi_ram_dp.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.0/ip/pmi/pmi_ram_dp.v(48): analyzing included file c:/lscc/radiant/3.0/ip/pmi/../common/ram_dp/rtl/lscc_ram_dp.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.0/ip/pmi/pmi_ice40up.v(12): analyzing included file c:/lscc/radiant/3.0/ip/pmi/pmi_ram_dq.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.0/ip/pmi/pmi_ram_dq.v(45): analyzing included file c:/lscc/radiant/3.0/ip/pmi/../common/ram_dq/rtl/lscc_ram_dq.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.0/ip/pmi/pmi_ice40up.v(13): analyzing included file c:/lscc/radiant/3.0/ip/pmi/pmi_rom.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.0/ip/pmi/pmi_rom.v(45): analyzing included file c:/lscc/radiant/3.0/ip/pmi/../common/rom/rtl/lscc_rom.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.0/ip/pmi/pmi_ice40up.v(14): analyzing included file c:/lscc/radiant/3.0/ip/pmi/pmi_sub.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.0/ip/pmi/pmi_sub.v(50): analyzing included file c:/lscc/radiant/3.0/ip/pmi/../common/subtractor/rtl/lscc_subtractor.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.0/ip/pmi/pmi_ice40up.v(15): analyzing included file c:/lscc/radiant/3.0/ip/pmi/pmi_ram_dp_be.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.0/ip/pmi/pmi_ram_dp_be.v(49): analyzing included file c:/lscc/radiant/3.0/ip/pmi/../common/ram_dp/rtl/lscc_ram_dp.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.0/ip/pmi/pmi_ice40up.v(16): analyzing included file c:/lscc/radiant/3.0/ip/pmi/pmi_ram_dq_be.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.0/ip/pmi/pmi_ram_dq_be.v(45): analyzing included file c:/lscc/radiant/3.0/ip/pmi/../common/ram_dq/rtl/lscc_ram_dq.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/3.0/ip/pmi/pmi_ice40up.v(17): analyzing included file c:/lscc/radiant/3.0/ip/pmi/pmi_dsp.v. VERI-1328
+Analyzing Verilog file d:/users/nicob/desktop/tp2_e3-g2/alarmmodule/source/alarm/mainmodule.v. VERI-1482
+Analyzing Verilog file d:/users/nicob/desktop/tp2_e3-g2/alarmmodule/source/alarm/easyserialout.v. VERI-1482
+Analyzing Verilog file d:/users/nicob/desktop/tp2_e3-g2/alarmmodule/source/alarm/serialout.v. VERI-1482
+Analyzing Verilog file d:/users/nicob/desktop/tp2_e3-g2/alarmmodule/source/alarm/codecheck.v. VERI-1482
+Analyzing Verilog file d:/users/nicob/desktop/tp2_e3-g2/alarmmodule/source/alarm/timer.v. VERI-1482
+Analyzing VHDL file c:/lscc/radiant/3.0/ip/pmi/pmi_ice40up.vhd. VHDL-1481
+Analyzing VHDL file c:/lscc/radiant/3.0/ip/pmi/pmi_ice40up.vhd
+
+INFO - synthesis: c:/lscc/radiant/3.0/ip/pmi/pmi_ice40up.vhd(4): analyzing package components. VHDL-1014
+unit MainModule is not yet analyzed. VHDL-1485
+INFO - synthesis: The default VHDL library search path is now "D:/Users/nicob/Desktop/TP2_E3-G2/AlarmModule/Alarm". VHDL-1504
+Top module language type = Verilog.
+Top module name (Verilog, mixed language): MainModule
+INFO - synthesis: d:/users/nicob/desktop/tp2_e3-g2/alarmmodule/source/alarm/mainmodule.v(1): compiling module MainModule. VERI-1018
+INFO - synthesis: C:/lscc/radiant/3.0/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(764): compiling module LSOSC. VERI-1018
+INFO - synthesis: d:/users/nicob/desktop/tp2_e3-g2/alarmmodule/source/alarm/timer.v(4): compiling module timer. VERI-1018
+INFO - synthesis: d:/users/nicob/desktop/tp2_e3-g2/alarmmodule/source/alarm/easyserialout.v(5): compiling module easySerialOut. VERI-1018
+INFO - synthesis: d:/users/nicob/desktop/tp2_e3-g2/alarmmodule/source/alarm/serialout.v(1): compiling module serialOut. VERI-1018
+INFO - synthesis: d:/users/nicob/desktop/tp2_e3-g2/alarmmodule/source/alarm/codecheck.v(1): compiling module codeCkeck. VERI-1018
+WARNING - synthesis: d:/users/nicob/desktop/tp2_e3-g2/alarmmodule/source/alarm/codecheck.v(40): KB_IN should be on the sensitivity list. VERI-1221
+WARNING - synthesis: d:/users/nicob/desktop/tp2_e3-g2/alarmmodule/source/alarm/codecheck.v(45): actualKey should be on the sensitivity list. VERI-1221
+WARNING - synthesis: d:/users/nicob/desktop/tp2_e3-g2/alarmmodule/source/alarm/codecheck.v(45): key should be on the sensitivity list. VERI-1221
+WARNING - synthesis: d:/users/nicob/desktop/tp2_e3-g2/alarmmodule/source/alarm/codecheck.v(45): actualKey should be on the sensitivity list. VERI-1221
+WARNING - synthesis: d:/users/nicob/desktop/tp2_e3-g2/alarmmodule/source/alarm/codecheck.v(45): key should be on the sensitivity list. VERI-1221
+WARNING - synthesis: d:/users/nicob/desktop/tp2_e3-g2/alarmmodule/source/alarm/codecheck.v(46): actualKey should be on the sensitivity list. VERI-1221
+WARNING - synthesis: d:/users/nicob/desktop/tp2_e3-g2/alarmmodule/source/alarm/codecheck.v(46): key should be on the sensitivity list. VERI-1221
+WARNING - synthesis: d:/users/nicob/desktop/tp2_e3-g2/alarmmodule/source/alarm/codecheck.v(46): actualKey should be on the sensitivity list. VERI-1221
+WARNING - synthesis: d:/users/nicob/desktop/tp2_e3-g2/alarmmodule/source/alarm/codecheck.v(46): key should be on the sensitivity list. VERI-1221
+WARNING - synthesis: d:/users/nicob/desktop/tp2_e3-g2/alarmmodule/source/alarm/codecheck.v(57): KB_IN should be on the sensitivity list. VERI-1221
+WARNING - synthesis: d:/users/nicob/desktop/tp2_e3-g2/alarmmodule/source/alarm/mainmodule.v(82): PREV_KEY should be on the sensitivity list. VERI-1221
+                                                         
+
+
+### Number of Logic Cells: 5280
+
+
+### Number of RAM Blocks: 30
+
+
+### Number of DSP Blocks: 8
+
+
+### Number of PLLs: 1
+
+
+### Number of IO Pins: 56
+
+
+##########################################################
+
+
+                                                         
+
+
+WARNING - synthesis: Initial value found on net KEY_STATUS[1] will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net KEY_STATUS[0] will be ignored due to unrecognized driver type
+
+
+
+WARNING - synthesis: Mapping latch PREV_KEY_1__I_0_i1 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+WARNING - synthesis: Mapping latch Snext_1__I_0_i1 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+WARNING - synthesis: Mapping latch TIMER_EN_I_0 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+WARNING - synthesis: Mapping latch \keyboard/actualKey_0__1__I_0_2_i1 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+WARNING - synthesis: Mapping latch \keyboard/KB_IN_1__I_0_i1 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+WARNING - synthesis: Mapping latch \keyboard/KB_IN_1__I_0_3_i1 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+WARNING - synthesis: Mapping latch \keyboard/KB_IN_1__I_0_2_i1 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+WARNING - synthesis: Mapping latch \keyboard/nextState_1__I_0_i1 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+WARNING - synthesis: Mapping latch \keyboard/nextState_1__I_0_i2 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+WARNING - synthesis: Mapping latch PREV_KEY_1__I_0_i2 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+WARNING - synthesis: Mapping latch Snext_1__I_0_i2 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+WARNING - synthesis: Mapping latch \keyboard/actualKey_0__1__I_0_2_i2 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+WARNING - synthesis: Mapping latch \keyboard/KB_IN_1__I_0_i2 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+WARNING - synthesis: Mapping latch \keyboard/KB_IN_1__I_0_3_i2 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+WARNING - synthesis: Mapping latch \keyboard/KB_IN_1__I_0_2_i2 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+INFO - synthesis: Special Primitives IFD1P3AZ and OFD1P3AZ for ThunderPlus are synthesized using IOL_B.
+
+
+<A name="lse_area"></A><B><U><big>Area Report</big></U></B>
+
+################### Begin Area Report (MainModule)######################
+Number of register bits => 100 of 5280 (1 % )
+CCU2 => 44
+FD1P3XZ => 100
+IB => 6
+IOL_B => 1
+LSOSC_CORE => 1
+LUT4 => 168
+OB => 4
+################### End Area Report ##################
+Number of odd-length carry chains : 0
+Number of even-length carry chains : 3
+
+
+<A name="lse_clock"></A><B><U><big>Clock Report</big></U></B>
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 2
+  Net : SERCLK_OUT_c, loads : 1
+  Net : KB_RECV_c, loads : 0
+Clock Enable Nets
+Number of Clock Enables: 0
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : STATE_OUT/waiting, loads : 32
+  Net : STATE_OUT/waiting_N_151, loads : 31
+  Net : STATE_OUT/serial/n174, loads : 30
+  Net : mainTimer/TIME_OUT, loads : 24
+  Net : mainTimer/clkCont_17__N_49, loads : 19
+  Net : Sreg[0], loads : 13
+  Net : Sreg[1], loads : 12
+  Net : KEY_STATUS[1], loads : 11
+  Net : keyboard/state[1], loads : 10
+  Net : keyboard/state[0], loads : 10
+################### End Clock Report ##################
+
+Peak Memory Usage: 78 MB
+
+--------------------------------------------------------------
+Total CPU Time: 2 secs 
+Total REAL Time: 3 secs 
+--------------------------------------------------------------
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></DIV>
+
+<DIV id="toc" class="radiant"><span onmousemove="showTocList()">Contents</span>
+<UL id="toc_list">
+<LI><A href=#Syn>Top</A></LI>
+<LI><A href=#lse_area>Area Report</A></LI>
+<LI><A href=#lse_clock>Clock Report</A></LI>
+</UL>
+</DIV>
+
+<button id="back_to_top" class="radiant" onclick="scrollToTop()">&lt;</button>
+<script type="text/javascript">
+<!--
+var scrollStep = 0;
+function scrollToTop(){
+  var funScroll = function() {
+    var top = document.body.scrollTop;
+    if (top == 0) {
+      scrollStep = 0;
+      return;
+    }
+    if (scrollStep == 0)
+      scrollStep = top/20 + 1;
+    top -= scrollStep;
+    if (top < 0)
+      top = 0;
+    document.body.scrollTop = top;
+    requestAnimationFrame(funScroll);
+  };
+  funScroll();
+}
+
+window.addEventListener('scroll', function(e) {
+  var backToTop = document.getElementById('back_to_top')
+  if (document.body.scrollTop > 0) {
+    backToTop.style.display = 'block';
+  } else {	backToTop.style.display = 'none'  }});
+
+//-->
+</script>
+
+<style type="text/css">
+#back_to_top {
+  bottom:20px; right:20px;
+  width:30px; height:30px;
+  font-size: 20px;
+  padding: 2px 5px 2px 5px;
+  position:fixed;
+  background-color:rgba(210,210,210,0.1);
+  border-style: solid;
+  border-color: rgba(192,192,192,0.8);
+  border-width:1px;
+  display:none;
+  -webkit-transform: rotate(90deg);
+  -webkit-transform-origin:50% 50%;
+}
+#back_to_top:focus {
+  outline-width:0px;
+}
+</style>
+
+</BODY>
+
